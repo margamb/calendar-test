@@ -1,6 +1,24 @@
-# Getting Started with Create React App
+# Calendar App
+
+A calendar app I created to improve my react and javascript.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## How it works
+
+- Click on sign in or sign up then create an event with a form.
+- See all events with their information.
+
+## Technologies used
+
+- React
+- HTML
+- CSS
+- Supabase
+
+## What I have learned
+
+- How to use supabase (authentication, database).
 
 ## Available Scripts
 
