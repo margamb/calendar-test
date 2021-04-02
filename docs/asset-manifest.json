@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "./static/css/main.744b5237.chunk.css",
+    "main.js": "./static/js/main.4dc83cbe.chunk.js",
+    "main.js.map": "./static/js/main.4dc83cbe.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.32233868.js",
+    "runtime-main.js.map": "./static/js/runtime-main.32233868.js.map",
+    "static/js/2.9100984e.chunk.js": "./static/js/2.9100984e.chunk.js",
+    "static/js/2.9100984e.chunk.js.map": "./static/js/2.9100984e.chunk.js.map",
+    "static/js/3.27fd8338.chunk.js": "./static/js/3.27fd8338.chunk.js",
+    "static/js/3.27fd8338.chunk.js.map": "./static/js/3.27fd8338.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.744b5237.chunk.css.map": "./static/css/main.744b5237.chunk.css.map",
+    "static/js/2.9100984e.chunk.js.LICENSE.txt": "./static/js/2.9100984e.chunk.js.LICENSE.txt",
+    "static/media/avatar.41ed9e6f.png": "./static/media/avatar.41ed9e6f.png",
+    "static/media/blow-fish.5f9155f2.png": "./static/media/blow-fish.5f9155f2.png",
+    "static/media/icon-trash.7a6bde0b.svg": "./static/media/icon-trash.7a6bde0b.svg",
+    "static/media/logo.83b0457a.png": "./static/media/logo.83b0457a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.32233868.js",
+    "static/js/2.9100984e.chunk.js",
+    "static/css/main.744b5237.chunk.css",
+    "static/js/main.4dc83cbe.chunk.js"
+  ]
+}
