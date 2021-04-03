@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './SignIn.css';
-import blowFish from './img/blow-fish.png';
+import rocket from './img/rocket.svg';
+import cat from './img/cat.svg';
 import logo from './img/logo.png';
 import supabase from '../supabase';
 
@@ -77,7 +78,10 @@ const SignIn = ({ setUserData }) => {
         </form>
       </div>
 
-      <img src={blowFish} className="sigIn_img_fish"></img>
+      {/* <img src={rocket} className="signIn_img_rocket"></img> */}
+      <div className="signIn-img">
+        <div className="signIn_img_rocket"></div>
+      </div>
     </div>
   );
 };
