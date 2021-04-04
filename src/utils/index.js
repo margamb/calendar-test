@@ -19,3 +19,16 @@ export const sortObject = (o) =>
   Object.keys(o)
     .sort()
     .reduce((r, k) => ((r[k] = o[k]), r), {});
+
+export function getTodayDate() {
+  const today = new Date();
+  const month = today.getMonth() + 1;
+  const day = today.getDate();
+
+  const formattedMonth = month < 10 ? '0' + month : month;
+  const formattedDay = day < 10 ? '0' + day : day;
+
+  const date = `${today.getFullYear()}-${formattedMonth}-${formattedDay}`;
+
+  return date;
+}

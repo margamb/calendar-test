@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './CreateEvents.css';
 import supabase from '../supabase';
+import defaultImage from './img/events-img.svg';
 
 const CreateEvents = () => {
-  const defaultImage =
-    'https://64.media.tumblr.com/f56e03ccd8d5cc27a3c0632f795a7605/tumblr_ofr2xfiwjm1qfkrjeo1_1280.png';
-
   const [eventImg, setEventImg] = useState(defaultImage);
   const [eventDate, setEventDate] = useState(new Date());
   const [eventLink, setEventLink] = useState('');
@@ -109,7 +107,7 @@ const CreateEvents = () => {
           type="date"
           id="start"
           name="trip-start"
-          placeholder="2021-07-22"
+          placeholder={Date.now()}
           min={Date.now()}
           max="2021-12-31"
           onChange={handleEventDate}

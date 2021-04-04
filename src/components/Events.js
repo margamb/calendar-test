@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import supabase from '../supabase';
 import './Events.css';
 import trash from './img/icon-trash.svg';
-import { groupByDate, sortObject } from '../utils';
+import { getTodayDate, groupByDate, sortObject } from '../utils';
 import HeaderDate from './HeaderDate.js';
 
 const Events = (props) => {
@@ -10,8 +10,15 @@ const Events = (props) => {
 
   useEffect(() => {
     console.log('Mounting events');
+
+    const date = getTodayDate();
+
     async function fetchData() {
-      let { data } = await supabase.from('Events').select('*');
+      let { data } = await supabase
+        .from('Events')
+        .select('*')
+        // filtrar eventos a partir de hoy
+        .gte('date', date);
       const grouped = groupByDate(data);
       const sorted = sortObject(grouped);
       setEvents(sorted);
