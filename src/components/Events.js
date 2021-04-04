@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import supabase from '../supabase';
 import './Events.css';
 import trash from './img/icon-trash.svg';
 import { groupByDate, sortObject } from '../utils';
+import HeaderDate from './HeaderDate.js';
 
 const Events = (props) => {
-  const [events, setEvents] = React.useState([]);
+  const [events, setEvents] = useState([]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     console.log('Mounting events');
     async function fetchData() {
       let { data } = await supabase.from('Events').select('*');
@@ -23,7 +24,8 @@ const Events = (props) => {
     return dates.map((date) => {
       return (
         <div>
-          <h1>{date}</h1>
+          <HeaderDate date={date} />
+          {/* <h1>{date}</h1> */}
           {events[date].map((ev) => (
             <div className="event" key={ev.id}>
               <div className="event_box1">
