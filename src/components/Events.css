@@ -4,10 +4,12 @@
 }
 
 .event_title {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   max-width: 150px;
   overflow: visible;
+  text-align: left;
+  line-height: 20px;
 }
 
 .event_date {
@@ -19,12 +21,12 @@
 .event {
   width: 90%;
   margin: auto;
-  padding: 10px;
+  padding: 10px 10px 25px 10px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  border-bottom: var(--gray-200) 1px solid;
+  /* border-bottom: var(--gray-200) 1px solid; */
 }
 
 .event_box1 {
@@ -84,4 +86,73 @@
 
 .moreInfo:hover {
   opacity: 1;
+}
+
+@media screen and (min-width: 750px) {
+  .events {
+    width: 500px;
+    margin: auto;
+  }
+
+  .event_title {
+    max-width: 300px;
+  }
+
+  .trash {
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .eventsTime {
+    display: flex;
+    width: 100%;
+  }
+
+  .boxevents-1 {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .boxevents-2 {
+    background-color: green;
+    width: 30%;
+    height: 100%;
+  }
+
+  .events {
+    width: 65%;
+    margin: 0;
+  }
+
+  .event_img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10%;
+    margin-right: 10px;
+  }
+
+  .event_title {
+    max-width: 300px;
+    font-size: 18px;
+  }
+
+  .event_date {
+    font-size: 16px;
+  }
+
+  .trash {
+    width: 15%;
+  }
+
+  .img-globe-box2 {
+    width: 25%;
+    height: 100vh;
+    background-image: url('./img/globe.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 55px;
+    position: fixed;
+  }
 }

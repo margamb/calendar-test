@@ -13,6 +13,7 @@ const CreateEvents = () => {
   const [eventCity, setEventCity] = useState('');
   const [eventAddress, setEventAddress] = useState('');
   const [eventInformation, setEventInformation] = useState('');
+  const [eventHour, setEventHour] = useState('');
   const [eventData, setEventData] = useState('');
 
   let history = useHistory();
@@ -57,6 +58,11 @@ const CreateEvents = () => {
     console.log('eventInformation', eventInformation);
   }
 
+  function handleEventHour(ev) {
+    setEventHour(ev.target.value);
+    console.log('eventHour', eventHour);
+  }
+
   async function handleFormEvent(ev) {
     ev.preventDefault();
     const { data, error } = await supabase.from('Events').insert([
@@ -69,6 +75,7 @@ const CreateEvents = () => {
         city: eventCity,
         address: eventAddress,
         information: eventInformation,
+        hour: eventHour,
       },
     ]);
     console.error(error);
@@ -111,6 +118,16 @@ const CreateEvents = () => {
           min={Date.now()}
           max="2021-12-31"
           onChange={handleEventDate}
+        ></input>
+        <label htmlFor="start" className="event_form_label">
+          Hora
+        </label>
+        <input
+          className="event_form_input"
+          type="text"
+          id="name"
+          placeholder="17:00"
+          onChange={handleEventHour}
         ></input>
         <label className="event_form_label" htmlFor="text">
           Link del evento

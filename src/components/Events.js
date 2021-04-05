@@ -30,49 +30,39 @@ const Events = (props) => {
     const dates = Object.keys(events);
     return dates.map((date) => {
       return (
-        <div>
+        <div className="boxevents-1">
           <HeaderDate date={date} />
-          {/* <h1>{date}</h1> */}
-          {events[date].map((ev) => (
-            <div className="event" key={ev.id}>
-              <div className="event_box1">
-                <img className="event_img" src={ev.image} alt={ev.name} />
-                <h1 className="event_title">{ev.name}</h1>
-              </div>
-              <div className="event_box2">
-                <p className="event_date">{ev.date}</p>
-                <div className="more_delete_btns">
-                  <p className="moreInfo">info</p>
-                  <img className="trash" src={trash} />
+          {events[date].map((ev) => {
+            const time = ev.hour ? ev.hour.slice(0, -3) + 'h' : null;
+            return (
+              <div className="event" key={ev.id}>
+                <div className="event_box1">
+                  <img className="event_img" src={ev.image} alt={ev.name} />
+                  <h1 className="event_title">{ev.name}</h1>
+                </div>
+                <div className="event_box2">
+                  <p className="event_date">{time}</p>
+                  <div className="more_delete_btns">
+                    <p className="moreInfo">info</p>
+                    <img className="trash" src={trash} />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       );
     });
   }
 
-  return <div className="events">{renderEvents()}</div>;
-  // return (
-  //   <div className="events">
-  //     {events.map((ev) => (
-  //       <div className="event" key={ev.id}>
-  //         <div className="event_box1">
-  //           <img className="event_img" src={ev.image} alt={ev.name} />
-  //           <h1 className="event_title">{ev.name}</h1>
-  //         </div>
-  //         <div className="event_box2">
-  //           <p className="event_date">{ev.date}</p>
-  //           <div className="more_delete_btns">
-  //             <p className="moreInfo">info</p>
-  //             <img className="trash" src={trash} />
-  //           </div>
-  //         </div>
-  //       </div>
-  //     ))}
-  //   </div>
-  // );
+  return (
+    <div className="eventsTime">
+      <div className="boxevents-2">
+        <div className="img-globe-box2"></div>
+      </div>
+      <div className="events">{renderEvents()}</div>
+    </div>
+  );
 };
 
 export default Events;

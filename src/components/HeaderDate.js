@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './HeaderDate.css';
 const HeaderDate = ({ date }) => {
   console.log('date', date);
   // let dateTest = new Date(date);
@@ -50,10 +50,10 @@ const HeaderDate = ({ date }) => {
   // }
 
   return (
-    <div>
+    <div className="headerDate">
       {/* <h1>{date}</h1> */}
-      <h1>
-        {weekday}, {day} {month}
+      <h1 className="headerDate-title">
+        {weekday} | <span className="headerDate-day">{day}</span> de {month}
       </h1>
     </div>
   );
