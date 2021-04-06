@@ -5,7 +5,7 @@ import trash from './img/icon-trash.svg';
 import { getTodayDate, groupByDate, sortObject } from '../utils';
 import HeaderDate from './HeaderDate.js';
 
-const Events = (props) => {
+const Events = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
@@ -43,7 +43,9 @@ const Events = (props) => {
                 <div className="event_box2">
                   <p className="event_date">{time}</p>
                   <div className="more_delete_btns">
-                    <p className="moreInfo">info</p>
+                    <a className="moreInfo" href={`/events/${ev.id}`}>
+                      Info
+                    </a>
                     <img className="trash" src={trash} />
                   </div>
                 </div>

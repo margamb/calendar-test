@@ -7,6 +7,7 @@ import SignIn from './SignIn';
 import SignUp from './SignUp';
 import CreateEvents from './CreateEvents';
 import Events from './Events';
+import InfoDetailEvent from './InfoDetailEvent';
 
 function App() {
   const [userData, setUserData] = useState('');
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route path="/createEvents">
           <CreateEvents />
+        </Route>
+        <Route path="/events/:id">
+          <InfoDetailEvent />
         </Route>
       </Switch>
     </div>
