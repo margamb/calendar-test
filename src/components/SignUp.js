@@ -53,7 +53,7 @@ const SignIn = ({ setUserData }) => {
           <input
             type="text"
             id="name"
-            placeholder="Marta"
+            placeholder="Enter your name"
             className="form_input"
             onChange={handleUserName}
           />
@@ -63,7 +63,7 @@ const SignIn = ({ setUserData }) => {
           <input
             type="text"
             id="name"
-            placeholder="8 dígitos"
+            placeholder="Enter your password"
             className="form_input"
             onChange={handlePassword}
           />
@@ -74,7 +74,7 @@ const SignIn = ({ setUserData }) => {
             type="text"
             id="confirmPassword"
             className="form_input"
-            placeholder="8 dígitos"
+            placeholder="Enter your password"
             onChange={handleConfirmPassword}
           />
           <input

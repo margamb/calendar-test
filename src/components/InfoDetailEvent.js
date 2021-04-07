@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './InfoDetailEvent.css';
+import IconCalendar from '../components/img/IconCalendar.js';
+import IconClock from '../components/img/IconClock.js';
+import IconLocation from '../components/img/IconLocation.js';
+import IconLink from '../components/img/IconLink.js';
+import IconZoomIn from '../components/img/IconZoomIn.js';
+import IconTarget from '../components/img/IconTarget.js';
 
 import supabase from '../supabase';
 
@@ -32,31 +38,41 @@ const InfoDetailEvent = () => {
       <div className="information-detail">
         <img className="image" src={event.image} />
         <div className="information-detail-text">
-          <h1 className="information-detail-title">{event.name}</h1>
-          <p className="information-detail-items">
-            <span className="title-items ">Fecha: </span>
-            {date}, {hour} horas
-          </p>
-          <p className="information-detail-items">
-            <span className="title-items">Ciudad: </span>
-            {city}
-          </p>
-          <p className="information-detail-items">
-            <span className="title-items">Direccion: </span>
-            {address}
-          </p>
-          <p className="information-detail-items">
-            <span className="title-items">Edad recomendada: </span>
-            {age} años
-          </p>
-          <p className="information-detail-items">
-            <span className="title-items">Informacion adicional: </span>
-            {information}
-          </p>
-          <p className="information-detail-items">
-            <span className="title-items">Link: </span>
-            {link}
-          </p>
+          <div className="info-detail-date">
+            <h1 className="information-detail-title">{event.name}</h1>
+            <div className="information-detail-items-date">
+              <IconCalendar className="calendar" />
+              <p className="icon-text">{date}</p>
+            </div>
+            <div className="information-detail-items-date">
+              <IconClock className="clock" />
+              <p className="icon-text">{hour} horas</p>
+            </div>
+          </div>
+
+          <div className="information-detail-items">
+            <IconLocation className="location" />
+            <p>{city}</p>
+          </div>
+          <div className="information-detail-items">
+            <IconLocation className="location" />
+            <p>{address}</p>
+          </div>
+
+          <div className="information-detail-items">
+            <IconTarget className="location" />
+            <p>{age} años</p>
+          </div>
+
+          <div className="information-detail-items">
+            <IconZoomIn className="location" />
+            <p>{information}</p>
+          </div>
+
+          <div className="information-detail-items">
+            <IconLink className="location" />
+            <p>{link}</p>
+          </div>
           <div className="cat-info"></div>
         </div>
       </div>
