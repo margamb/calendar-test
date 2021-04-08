@@ -2,6 +2,29 @@
   outline: none;
 }
 
+.reset-Info-SignIn {
+  background-color: var(--white);
+  fill: var(--primary);
+  padding: 2px 3px;
+  border-radius: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  box-shadow: 3px 3px 6px var(--gray-600);
+  /* border: 2px solid var(--primary); */
+  margin-top: 20px;
+  position: fixed;
+  right: 30px;
+  cursor: pointer;
+}
+
+.reset-Info-SignIn:hover {
+  fill: var(--white);
+  background-color: var(--primary);
+  box-shadow: 5px 5px 6px var(--gray-600);
+}
+
 .logo {
   width: 100px;
   margin-bottom: 10px;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import supabase from '../supabase';
 import './Events.css';
 import trash from './img/icon-trash.svg';
@@ -43,9 +44,9 @@ const Events = () => {
                 <div className="event_box2">
                   <p className="event_date">{time}</p>
                   <div className="more_delete_btns">
-                    <a className="moreInfo" href={`/events/${ev.id}`}>
+                    <Link className="moreInfo" to={`/events/${ev.id}`}>
                       Info
-                    </a>
+                    </Link>
                     <img className="trash" src={trash} />
                   </div>
                 </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import './InfoDetailEvent.css';
 import IconCalendar from '../components/img/IconCalendar.js';
 import IconClock from '../components/img/IconClock.js';
@@ -37,9 +37,13 @@ const InfoDetailEvent = () => {
 
   return (
     <div className="detail-box">
-      <a href={`/`} className="reset-Info-detail">
+      <Link
+        to="/"
+        style={{ textDecoration: 'none' }}
+        className="reset-Info-detail"
+      >
         <IconReset />
-      </a>
+      </Link>
 
       <div className="information-detail">
         <img className="image" src={event.image} />

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import './CreateEvents.css';
 import supabase from '../supabase';
 import defaultImage from './img/events-img.svg';
+import IconReset from '../components/img/IconReset.js';
 
 const CreateEvents = () => {
   const [eventImg, setEventImg] = useState(defaultImage);
@@ -93,101 +94,111 @@ const CreateEvents = () => {
   }
 
   return (
-    <div className="form_event">
-      <h2 className="create_event_title">Crear Evento</h2>
-      <form className="event_form" onSubmit={handleFormEvent}>
-        <label className="event_form_label" htmlFor="text">
-          Imagen del evento
-        </label>
-        <input
-          type="text"
-          id="name"
-          className="event_form_input"
-          placeholder="url de la imagen"
-          onChange={handleEventImg}
-        />
-        <label htmlFor="start" className="event_form_label">
-          Fecha
-        </label>
-        <input
-          className="event_form_input"
-          type="date"
-          id="start"
-          name="trip-start"
-          placeholder={Date.now()}
-          min={Date.now()}
-          max="2021-12-31"
-          onChange={handleEventDate}
-        ></input>
-        <label htmlFor="start" className="event_form_label">
-          Hora
-        </label>
-        <input
-          className="event_form_input"
-          type="text"
-          id="name"
-          placeholder="17:00"
-          onChange={handleEventHour}
-        ></input>
-        <label className="event_form_label" htmlFor="text">
-          Link del evento
-        </label>
-        <input
-          type="text"
-          id="name"
-          className="event_form_input"
-          placeholder="https://margamartinez.com/"
-          onChange={handleEventLink}
-        />
-        <label htmlFor="name" className="event_form_label">
-          Nombre del Evento
-        </label>
-        <input
-          type="text"
-          id="name"
-          className="event_form_input"
-          onChange={handleEventName}
-        />
-        <label htmlFor="name" className="event_form_label">
-          Edad recomendada
-        </label>
-        <input
-          type="text"
-          id="name"
-          className="event_form_input"
-          onChange={handleEventAge}
-        />
-        <label htmlFor="name" className="event_form_label">
-          Población
-        </label>
-        <input
-          type="text"
-          id="name"
-          className="event_form_input"
-          onChange={handleEventCity}
-        />
-        <label htmlFor="name" className="event_form_label">
-          Dirección
-        </label>
-        <input
-          type="text"
-          id="name"
-          className="event_form_input"
-          placeholder="Calle Martin n4"
-          onChange={handleEventAddress}
-        />
-        <label htmlFor="textarea" className="event_form_label">
-          Información adicional:
-        </label>
-        <textarea
-          className="event_form_input"
-          id="textarea"
-          name="textarea"
-          onChange={handleEventInformation}
-        ></textarea>
-        <input type="submit" value="Crear evento" className="event_btn" />
-      </form>
-    </div>
+    <>
+      <Link to="/" style={{ textDecoration: 'none' }}>
+        <IconReset className="reset-Info-createEvent" />
+      </Link>
+      <div className="create-event-box">
+        <div className="box-create-event-img">
+          <div className="create-event-img"></div>
+        </div>
+        <div className="form_event">
+          <h2 className="create_event_title">Crear Evento</h2>
+          <form className="event_form" onSubmit={handleFormEvent}>
+            <label className="event_form_label" htmlFor="text">
+              Imagen del evento
+            </label>
+            <input
+              type="text"
+              id="name"
+              className="event_form_input"
+              placeholder="url de la imagen"
+              onChange={handleEventImg}
+            />
+            <label htmlFor="start" className="event_form_label">
+              Fecha
+            </label>
+            <input
+              className="event_form_input"
+              type="date"
+              id="start"
+              name="trip-start"
+              placeholder={Date.now()}
+              min={Date.now()}
+              max="2021-12-31"
+              onChange={handleEventDate}
+            ></input>
+            <label htmlFor="start" className="event_form_label">
+              Hora
+            </label>
+            <input
+              className="event_form_input"
+              type="text"
+              id="name"
+              placeholder="17:00"
+              onChange={handleEventHour}
+            ></input>
+            <label className="event_form_label" htmlFor="text">
+              Link del evento
+            </label>
+            <input
+              type="text"
+              id="name"
+              className="event_form_input"
+              placeholder="https://margamartinez.com/"
+              onChange={handleEventLink}
+            />
+            <label htmlFor="name" className="event_form_label">
+              Nombre del Evento
+            </label>
+            <input
+              type="text"
+              id="name"
+              className="event_form_input"
+              onChange={handleEventName}
+            />
+            <label htmlFor="name" className="event_form_label">
+              Edad recomendada
+            </label>
+            <input
+              type="text"
+              id="name"
+              className="event_form_input"
+              onChange={handleEventAge}
+            />
+            <label htmlFor="name" className="event_form_label">
+              Población
+            </label>
+            <input
+              type="text"
+              id="name"
+              className="event_form_input"
+              onChange={handleEventCity}
+            />
+            <label htmlFor="name" className="event_form_label">
+              Dirección
+            </label>
+            <input
+              type="text"
+              id="name"
+              className="event_form_input"
+              placeholder="Calle Martin n4"
+              onChange={handleEventAddress}
+            />
+            <label htmlFor="textarea" className="event_form_label">
+              Información adicional:
+            </label>
+            <textarea
+              className="event_form_input"
+              id="textarea"
+              name="textarea"
+              onChange={handleEventInformation}
+            ></textarea>
+            <input type="submit" value="Crear evento" className="event_btn" />
+          </form>
+        </div>
+      </div>
+    </>
   );
 };
 
