@@ -7,6 +7,8 @@ import IconLocation from '../components/img/IconLocation.js';
 import IconLink from '../components/img/IconLink.js';
 import IconZoomIn from '../components/img/IconZoomIn.js';
 import IconTarget from '../components/img/IconTarget.js';
+import IconReset from '../components/img/IconReset.js';
+import { formatDate } from '../utils';
 
 import supabase from '../supabase';
 
@@ -23,18 +25,22 @@ const InfoDetailEvent = () => {
     fetchData();
   }, []);
 
-  console.log('🐷', event);
-  const age = event.age ? event.age : 'este evento no tiene edad recomenda';
-  const city = event.city ? event.city : 'no se sabe la ciudad';
-  const address = event.address ? event.address : 'no se sabe la direccion';
-  const information = event.information
-    ? event.information
-    : 'No se ha añadido ninguna informacion extra';
-  const link = event.link ? event.link : 'no hay link del evento';
-  const date = event.date ? event.date : 'no hay fecha del evento';
-  const hour = event.hour ? event.hour : '- -';
+  const age = event.age ? event.age : '- -';
+  const city = event.city ? event.city : '- -';
+  const address = event.address ? event.address : '- - ';
+  const information = event.information ? event.information : '- -';
+  const link = event.link ? event.link : '- -';
+
+  const hour = event.hour ? event.hour.slice(0, -3) : '- -';
+  const date1 = formatDate(event.date);
+  const date = date1 ? date1 : '- -';
+
   return (
-    <>
+    <div className="detail-box">
+      <a href={`/`} className="reset-Info-detail">
+        <IconReset />
+      </a>
+
       <div className="information-detail">
         <img className="image" src={event.image} />
         <div className="information-detail-text">
@@ -76,11 +82,8 @@ const InfoDetailEvent = () => {
           <div className="cat-info"></div>
         </div>
       </div>
-
-      {/* <pre>
-        <code>{JSON.stringify(event)}</code>
-      </pre> */}
-    </>
+      <div className="footer"></div>
+    </div>
   );
 };
 

@@ -32,3 +32,14 @@ export function getTodayDate() {
 
   return date;
 }
+
+export function formatDate(str) {
+  const date = new Date(str);
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+
+  const formattedMonth = month < 10 ? '0' + month : month;
+  const formattedDay = day < 10 ? '0' + day : day;
+
+  return `${formattedDay}-${formattedMonth}-${date.getFullYear()}`;
+}
