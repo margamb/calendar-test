@@ -6,7 +6,7 @@ import Header from './Header';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import CreateEvents from './CreateEvents';
-import Events from './Events';
+import ListEvents from './ListEvents';
 import InfoDetailEvent from './InfoDetailEvent';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <Header userData={userData} />
       <Switch>
         <Route exact path="/">
-          <Events />
+          <ListEvents />
         </Route>
         <Route path="/signIn">
           <SignIn setUserData={setUserData} />

@@ -1,9 +1,9 @@
-.headerDate {
+.header_date {
   width: 90%;
   margin: auto;
 }
 
-.headerDate-title {
+.header_date_title {
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -13,7 +13,7 @@
   border-bottom: solid 2px var(--gray-200);
 }
 
-.headerDate-day {
+.header_date_day {
   color: var(--primary);
   font-weight: 800;
   font-size: 22px;

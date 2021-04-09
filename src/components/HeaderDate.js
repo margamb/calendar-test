@@ -35,25 +35,10 @@ const HeaderDate = ({ date }) => {
   let weekday = weekdays[dateObject.getDay()];
   let day = dateObject.getDate();
 
-  // function renderMonth() {
-  //   for (let i; i <= dateTest.length; i++) {
-  //     if (dateTest === 0) {
-  //       return 'Enero';
-  //     }
-  //     if (dateTest === 1) {
-  //       return 'Febrero';
-  //     }
-  //     if (dateTest === 2) {
-  //       return 'Marzo';
-  //     }
-  //   }
-  // }
-
   return (
-    <div className="headerDate">
-      {/* <h1>{date}</h1> */}
-      <h1 className="headerDate-title">
-        {weekday} | <span className="headerDate-day">{day}</span> de {month}
+    <div className="header_date">
+      <h1 className="header_date_title">
+        {weekday} | <span className="header_date_day">{day}</span> de {month}
       </h1>
     </div>
   );

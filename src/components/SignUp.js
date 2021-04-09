@@ -85,14 +85,14 @@ const SignIn = ({ setUserData }) => {
             <input
               type="submit"
               value="Sign up"
-              className="signUp_btn js-SignIn"
+              className="signUp_btn"
               disabled={disableButton}
             />
           </form>
         </div>
         {/* <img src={globe} className="img-fish"></img> */}
-        <div className="signIn-img">
-          <div className="signIn_img_rocket"></div>
+        <div className="signUp_img">
+          <div className="signUp_img_globe"></div>
         </div>
       </div>
     </>

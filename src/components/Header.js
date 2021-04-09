@@ -31,7 +31,7 @@ const Header = ({ userData }) => {
   return (
     <>
       <div className="header">
-        <Link className="header_logo_box" to="/">
+        <Link className="header_logo_container" to="/">
           <img src={logo} className="header_logo" />
         </Link>
 

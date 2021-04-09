@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import './SignIn.css';
-import rocket from './img/rocket.svg';
-import cat from './img/cat.svg';
-import logo from './img/logo.png';
 import IconReset from '../components/img/IconReset.js';
 import supabase from '../supabase';
 
@@ -21,11 +18,6 @@ const SignIn = ({ setUserData }) => {
     setPassword(ev.target.value);
   }
 
-  // function handleFormSignIn(ev) {
-  //   ev.preventDefault();
-  //   setUserData(userName);
-  // }
-
   async function handleFormSignIn(ev) {
     ev.preventDefault();
     let { user, error } = await supabase.auth.signIn({
@@ -37,16 +29,10 @@ const SignIn = ({ setUserData }) => {
     history.push('/');
   }
 
-  // function onSubmit() {
-  //   console.log('submit');
-  //   setUserData(userName);
-  //   history.push('/');
-  // }
-
   return (
     <>
       <Link to="/" style={{ textDecoration: 'none' }}>
-        <IconReset className="reset-Info-SignIn" />
+        <IconReset className="reset_info_signIn" />
       </Link>
       <div className="signIn">
         <div className="sigIn_form">
@@ -73,17 +59,10 @@ const SignIn = ({ setUserData }) => {
               className="form_input"
               onChange={handlePassword}
             />
-            <input
-              type="submit"
-              value="Sign in"
-              className="signIn_btn js-SignIn"
-              // onClick={onSubmit}
-              // disabled={disableButton}
-            />
+            <input type="submit" value="Sign in" className="signIn_btn" />
           </form>
         </div>
 
-        {/* <img src={rocket} className="signIn_img_rocket"></img> */}
         <div className="signIn-img">
           <div className="signIn_img_rocket"></div>
         </div>

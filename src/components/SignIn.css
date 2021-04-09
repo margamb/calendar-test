@@ -2,7 +2,7 @@
   outline: none;
 }
 
-.reset-Info-SignIn {
+.reset_info_signIn {
   background-color: var(--white);
   fill: var(--primary);
   padding: 2px 3px;
@@ -19,7 +19,7 @@
   cursor: pointer;
 }
 
-.reset-Info-SignIn:hover {
+.reset_info_signIn:hover {
   fill: var(--white);
   background-color: var(--primary);
   box-shadow: 5px 5px 6px var(--gray-600);

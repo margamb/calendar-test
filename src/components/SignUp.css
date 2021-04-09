@@ -97,7 +97,7 @@
   width: 40%;
 }
 
-.signIn-img {
+.signUp_img {
   width: 100%;
   height: 300px;
   /* background-color: chocolate; */
@@ -106,7 +106,7 @@
   align-items: center;
 }
 
-.signIn_img_rocket {
+.signUp_img_globe {
   width: 70%;
   margin-top: 50px;
   background-image: url('./img/globe.svg');
@@ -133,14 +133,14 @@
     text-align: center;
   }
 
-  .signIn-img {
+  .signUp_img {
     width: 50%;
     height: 600px;
   }
 
-  .signIn_img_rocket {
+  .signUp_img_globe {
     width: 70%;
-    background-image: url('./img/sign-up-illustration.svg');
+    background-image: url('./img/sign-up-globe.svg');
     background-repeat: no-repeat;
     background-position: center;
 

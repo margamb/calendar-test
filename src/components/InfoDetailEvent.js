@@ -36,57 +36,57 @@ const InfoDetailEvent = () => {
   const date = date1 ? date1 : '- -';
 
   return (
-    <div className="detail-box">
+    <div className="info_detail_container">
       <Link
         to="/"
         style={{ textDecoration: 'none' }}
-        className="reset-Info-detail"
+        className="info_detail_reset"
       >
         <IconReset />
       </Link>
 
-      <div className="information-detail">
-        <img className="image" src={event.image} />
-        <div className="information-detail-text">
-          <div className="info-detail-date">
-            <h1 className="information-detail-title">{event.name}</h1>
-            <div className="information-detail-items-date">
-              <IconCalendar className="calendar" />
+      <div className="info_detail">
+        <img className="info_detail_image" src={event.image} />
+        <div className="info_detail_text">
+          <div className="info_detail_date">
+            <h1 className="info_detail_title">{event.name}</h1>
+            <div className="info_detail_items_date">
+              <IconCalendar className="icon_calendar" />
               <p className="icon-text">{date}</p>
             </div>
-            <div className="information-detail-items-date">
-              <IconClock className="clock" />
+            <div className="info_detail_items_date">
+              <IconClock className="icon_clock" />
               <p className="icon-text">{hour} horas</p>
             </div>
           </div>
 
-          <div className="information-detail-items">
-            <IconLocation className="location" />
+          <div className="info_detail_items">
+            <IconLocation className="icon_items" />
             <p>{city}</p>
           </div>
-          <div className="information-detail-items">
-            <IconLocation className="location" />
+          <div className="info_detail_items">
+            <IconLocation className="icon_items" />
             <p>{address}</p>
           </div>
 
-          <div className="information-detail-items">
-            <IconTarget className="location" />
+          <div className="info_detail_items">
+            <IconTarget className="icon_items" />
             <p>{age} años</p>
           </div>
 
-          <div className="information-detail-items">
-            <IconZoomIn className="location" />
+          <div className="info_detail_items">
+            <IconZoomIn className="icon_items" />
             <p>{information}</p>
           </div>
 
-          <div className="information-detail-items">
-            <IconLink className="location" />
+          <div className="info_detail_items">
+            <IconLink className="icon_items" />
             <p>{link}</p>
           </div>
-          <div className="cat-info"></div>
+          <div className="info_cat_img"></div>
         </div>
       </div>
-      <div className="footer"></div>
+      <div className="info_detail_footer"></div>
     </div>
   );
 };
