@@ -33,8 +33,14 @@ const SignIn = ({ setUserData }) => {
         email: userName,
         password: password,
       });
+
+      const userData = {
+        email: user.email,
+        id: user.id,
+      };
       console.log(user);
-      setUserData(user.email);
+      setUserData(userData);
+      localStorage.setItem('timekids-user', JSON.stringify(userData));
 
       history.push('/');
     }
@@ -85,7 +91,7 @@ const SignIn = ({ setUserData }) => {
             <input
               type="submit"
               value="Sign up"
-              className="signUp_btn"
+              className="signUp_btn js-SignIn"
               disabled={disableButton}
             />
           </form>

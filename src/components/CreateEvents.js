@@ -5,7 +5,7 @@ import supabase from '../supabase';
 import defaultImage from './img/events-img.svg';
 import IconReset from '../components/img/IconReset.js';
 
-const CreateEvents = () => {
+const CreateEvents = ({ userId }) => {
   const [eventImg, setEventImg] = useState(defaultImage);
   const [eventDate, setEventDate] = useState(new Date());
   const [eventLink, setEventLink] = useState('');
@@ -77,6 +77,7 @@ const CreateEvents = () => {
         address: eventAddress,
         information: eventInformation,
         hour: eventHour,
+        user: userId,
       },
     ]);
     console.error(error);

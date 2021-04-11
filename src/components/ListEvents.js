@@ -5,7 +5,7 @@ import './ListEvents.css';
 import { getTodayDate, groupByDate, sortObject } from '../utils';
 import Events from './Events.js';
 
-const ListEvents = () => {
+const ListEvents = ({ userId }) => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const ListEvents = () => {
     return dates.map((date) => {
       return (
         <div className="event_list_1">
-          <Events events={events} date={date} />
+          <Events events={events} date={date} userId={userId} />
         </div>
       );
     });

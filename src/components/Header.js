@@ -1,10 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './Header.css';
 import logo from './img/logo.png';
 import avatar from './img/avatar.png';
 
 const Header = ({ userData }) => {
+  const history = useHistory();
+
+  function logout() {
+    localStorage.removeItem('timekids-user');
+    history.go(0);
+  }
+
   function renderSign() {
     return (
       <>
@@ -22,6 +29,7 @@ const Header = ({ userData }) => {
     return (
       <>
         <img src={avatar} className="avatar" />
+        <button onClick={logout}>Log out</button>
         <Link to="createEvents">
           <button className="header_createEvent btn">Crear Evento</button>
         </Link>

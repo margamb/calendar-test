@@ -5,7 +5,7 @@ import trash from './img/icon-trash.svg';
 
 import HeaderDate from './HeaderDate.js';
 
-const Events = ({ events, date }) => {
+const Events = ({ events, date, userId }) => {
   return (
     <div>
       <HeaderDate date={date} />
@@ -23,7 +23,12 @@ const Events = ({ events, date }) => {
                 <Link className="more_info" to={`/events/${ev.id}`}>
                   Info
                 </Link>
-                <img className="icon_trash" src={trash} />
+                {userId === ev.user && (
+                  <div>
+                    <img className="icon_trash" src={trash} />
+                    <p>editar</p>
+                  </div>
+                )}
               </div>
             </div>
           </div>

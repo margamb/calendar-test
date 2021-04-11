@@ -25,7 +25,15 @@ const SignIn = ({ setUserData }) => {
       password: password,
     });
     console.error(error);
-    setUserData(user.email);
+    console.log(user);
+
+    const userData = {
+      email: user.email,
+      id: user.id,
+    };
+
+    setUserData(userData);
+    localStorage.setItem('timekids-user', JSON.stringify(userData));
     history.push('/');
   }
 
