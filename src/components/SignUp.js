@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import './SignUp.css';
-import globe from './img/globe.svg';
-import logo from './img/logo.png';
 import IconReset from '../components/img/IconReset.js';
 import supabase from '../supabase';
 
@@ -72,7 +70,7 @@ const SignIn = ({ setUserData }) => {
               Password
             </label>
             <input
-              type="text"
+              type="password"
               id="name"
               placeholder="Enter your password"
               className="form_input"
@@ -82,7 +80,7 @@ const SignIn = ({ setUserData }) => {
               Confirm password
             </label>
             <input
-              type="text"
+              type="password"
               id="confirmPassword"
               className="form_input"
               placeholder="Enter your password"

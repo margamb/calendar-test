@@ -15,6 +15,30 @@
   border-bottom: var(--gray-200) 1px solid;
 }
 
+.header_create_event {
+  margin-right: 10px;
+}
+
+.header_log_out {
+  /* box-shadow: #d1d9e6 2px 2px 5px; */
+  margin-right: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  border: none;
+  color: var(--primary);
+  background: var(--white);
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  height: 40px;
+}
+
+.header_log_out:hover {
+  box-shadow: #d1d9e6 5px 5px 10px;
+}
+
 .avatar {
   width: 30px;
   margin-right: 10px;

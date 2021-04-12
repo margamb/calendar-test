@@ -1,11 +1,27 @@
 import React from 'react';
 import './Events.css';
-import { Link } from 'react-router-dom';
-import trash from './img/icon-trash.svg';
+import { Link, useHistory } from 'react-router-dom';
+import supabase from '../supabase';
 
 import HeaderDate from './HeaderDate.js';
+import IconDelete from './img/IconDelete.js';
+import IconEdit from './img/IconEdit';
 
 const Events = ({ events, date, userId }) => {
+  let history = useHistory();
+
+  async function deleteEvents(id) {
+    console.log('deleting', id);
+    const { data, error } = await supabase.from('Events').delete().eq('id', id);
+
+    console.log(data, error);
+    history.go(0);
+  }
+
+  function editEvents() {
+    console.log('Edit event');
+  }
+
   return (
     <div>
       <HeaderDate date={date} />
@@ -20,16 +36,20 @@ const Events = ({ events, date, userId }) => {
             <div className="event_box_2">
               <p className="event_date">{time}</p>
               <div className="more_delete_btns">
-                <Link className="more_info" to={`/events/${ev.id}`}>
-                  Info
-                </Link>
                 {userId === ev.user && (
                   <div>
-                    <img className="icon_trash" src={trash} />
-                    <p>editar</p>
+                    <Link to={{ pathname: '/createEvents', state: { ev } }}>
+                      <IconEdit className="icon_edit" />
+                    </Link>
+                    <span onClick={() => deleteEvents(ev.id)}>
+                      <IconDelete className="icon_delete" />
+                    </span>
                   </div>
                 )}
               </div>
+              <Link className="more_info" to={`/events/${ev.id}`}>
+                Info
+              </Link>
             </div>
           </div>
         );

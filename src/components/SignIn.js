@@ -61,7 +61,7 @@ const SignIn = ({ setUserData }) => {
               Password
             </label>
             <input
-              type="text"
+              type="password"
               id="name"
               placeholder="Enter your password"
               className="form_input"

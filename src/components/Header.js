@@ -28,10 +28,12 @@ const Header = ({ userData }) => {
   function renderLogueado() {
     return (
       <>
-        <img src={avatar} className="avatar" />
-        <button onClick={logout}>Log out</button>
+        {/* <img src={avatar} className="avatar" /> */}
+        <button className="header_log_out" onClick={logout}>
+          Sign out
+        </button>
         <Link to="createEvents">
-          <button className="header_createEvent btn">Crear Evento</button>
+          <button className="header_create_event btn">Crear evento</button>
         </Link>
       </>
     );
@@ -40,7 +42,7 @@ const Header = ({ userData }) => {
     <>
       <div className="header">
         <Link className="header_logo_container" to="/">
-          <img src={logo} className="header_logo" />
+          <img src={logo} className="header_logo" alt="logo" title="logo" />
         </Link>
 
         {userData === '' ? renderSign() : renderLogueado()}
