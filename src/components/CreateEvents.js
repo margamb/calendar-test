@@ -1,97 +1,97 @@
 import React, { useState } from 'react';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory, Link, useLocation } from 'react-router-dom';
 import './CreateEvents.css';
 import supabase from '../supabase';
 import defaultImage from './img/events-img.svg';
 import IconReset from '../components/img/IconReset.js';
 
 const CreateEvents = ({ userId }) => {
-  const [eventImg, setEventImg] = useState(defaultImage);
-  const [eventDate, setEventDate] = useState(new Date());
-  const [eventLink, setEventLink] = useState('');
-  const [eventName, setEventName] = useState('');
-  const [eventAge, setEventAge] = useState('');
-  const [eventCity, setEventCity] = useState('');
-  const [eventAddress, setEventAddress] = useState('');
-  const [eventInformation, setEventInformation] = useState('');
-  const [eventHour, setEventHour] = useState('');
-  const [eventData, setEventData] = useState('');
+  let location = useLocation();
+
+  const [eventImg, setEventImg] = useState(
+    location?.state?.ev?.image || defaultImage
+  );
+  const [eventDate, setEventDate] = useState(
+    location?.state?.ev?.date || new Date()
+  );
+  const [eventLink, setEventLink] = useState(location?.state?.ev?.link || '');
+  const [eventName, setEventName] = useState(location?.state?.ev?.name || '');
+  const [eventAge, setEventAge] = useState(location?.state?.ev?.age || '');
+  const [eventCity, setEventCity] = useState(location?.state?.ev?.city || '');
+  const [eventAddress, setEventAddress] = useState(
+    location?.state?.ev?.address || ''
+  );
+  const [eventInformation, setEventInformation] = useState(
+    location?.state?.ev?.information || ''
+  );
+
+  const [eventHour, setEventHour] = useState(
+    (location?.state?.ev?.hour && location?.state?.ev?.hour.slice(0, -3)) || ''
+  );
 
   let history = useHistory();
 
   function handleEventImg(ev) {
     setEventImg(ev.target.value);
-    console.log('eventImg', eventImg);
   }
 
   function handleEventDate(ev) {
     setEventDate(ev.target.value);
-    console.log('eventDate', eventDate);
   }
 
   function handleEventLink(ev) {
     setEventLink(ev.target.value);
-    console.log('eventLink', eventLink);
   }
 
   function handleEventName(ev) {
     setEventName(ev.target.value);
-    console.log('eventNeame', eventName);
   }
 
   function handleEventAge(ev) {
     setEventAge(ev.target.value);
-    console.log('eventAge', eventAge);
   }
 
   function handleEventCity(ev) {
     setEventCity(ev.target.value);
-    console.log('eventCity', eventCity);
   }
 
   function handleEventAddress(ev) {
     setEventAddress(ev.target.value);
-    console.log('eventAddress', eventAddress);
   }
 
   function handleEventInformation(ev) {
     setEventInformation(ev.target.value);
-    console.log('eventInformation', eventInformation);
   }
 
   function handleEventHour(ev) {
     setEventHour(ev.target.value);
-    console.log('eventHour', eventHour);
   }
 
   async function handleFormEvent(ev) {
     ev.preventDefault();
-    const { data, error } = await supabase.from('Events').insert([
-      {
-        name: eventName,
-        image: eventImg,
-        date: eventDate,
-        link: eventLink,
-        age: eventAge,
-        city: eventCity,
-        address: eventAddress,
-        information: eventInformation,
-        hour: eventHour,
-        user: userId,
-      },
-    ]);
-    console.error(error);
-    history.push('/');
+    const eventData = {
+      name: eventName,
+      image: eventImg,
+      date: eventDate,
+      link: eventLink,
+      age: eventAge,
+      city: eventCity,
+      address: eventAddress,
+      information: eventInformation,
+      hour: eventHour,
+      user: userId,
+    };
 
-    // setEventData({
-    //   eventImg: eventImg,
-    //   eventLink: eventLink
-    //   eventName: eventName,
-    //   eventAge: eventAge,
-    //   eventCity: eventCity,
-    //   eventAddress: eventAddress,
-    //   eventInformation: eventInformation,
-    // });
+    if (!location.state.ev.id) {
+      const { data, error } = await supabase.from('Events').insert([eventData]);
+    } else {
+      const { data, error } = await supabase
+        .from('Events')
+        .update(eventData)
+        .eq('id', location.state.ev.id);
+    }
+
+    history.push('/events/' + location.state.ev.id);
   }
 
   return (
@@ -114,6 +114,7 @@ const CreateEvents = ({ userId }) => {
               id="name"
               className="event_form_input"
               placeholder="url de la imagen"
+              value={eventImg}
               onChange={handleEventImg}
             />
             <label htmlFor="start" className="event_form_label">
@@ -125,6 +126,7 @@ const CreateEvents = ({ userId }) => {
               id="start"
               name="trip-start"
               placeholder={Date.now()}
+              value={eventDate}
               min={Date.now()}
               max="2021-12-31"
               onChange={handleEventDate}
@@ -138,6 +140,7 @@ const CreateEvents = ({ userId }) => {
               id="name"
               placeholder="17:00"
               onChange={handleEventHour}
+              value={eventHour}
             ></input>
             <label className="event_form_label" htmlFor="text">
               Link del evento
@@ -153,6 +156,7 @@ const CreateEvents = ({ userId }) => {
               Nombre del Evento
             </label>
             <input
+              value={eventName}
               type="text"
               id="name"
               className="event_form_input"
@@ -195,7 +199,11 @@ const CreateEvents = ({ userId }) => {
               name="textarea"
               onChange={handleEventInformation}
             ></textarea>
-            <input type="submit" value="Crear evento" className="event_btn" />
+            <input
+              type="submit"
+              value={location?.state?.ev?.id ? 'Editar evento' : 'Crear evento'}
+              className="event_btn"
+            />
           </form>
         </div>
       </div>

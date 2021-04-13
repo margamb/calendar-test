@@ -14,18 +14,14 @@ const Events = ({ events, date, userId }) => {
     console.log('deleting', id);
     const { data, error } = await supabase.from('Events').delete().eq('id', id);
 
-    console.log(data, error);
     history.go(0);
-  }
-
-  function editEvents() {
-    console.log('Edit event');
   }
 
   return (
     <div>
       <HeaderDate date={date} />
       {events[date].map((ev) => {
+        console.log(ev);
         const time = ev.hour ? ev.hour.slice(0, -3) + 'h' : null;
         return (
           <div className="event" key={ev.id}>

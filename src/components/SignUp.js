@@ -13,7 +13,6 @@ const SignIn = ({ setUserData }) => {
 
   function handleUserName(ev) {
     setUserName(ev.target.value);
-    console.log('name', userName);
   }
 
   function handlePassword(ev) {
@@ -36,7 +35,6 @@ const SignIn = ({ setUserData }) => {
         email: user.email,
         id: user.id,
       };
-      console.log(user);
       setUserData(userData);
       localStorage.setItem('timekids-user', JSON.stringify(userData));
 
@@ -94,7 +92,6 @@ const SignIn = ({ setUserData }) => {
             />
           </form>
         </div>
-        {/* <img src={globe} className="img-fish"></img> */}
         <div className="signUp_img">
           <div className="signUp_img_globe"></div>
         </div>

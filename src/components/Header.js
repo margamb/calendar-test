@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import './Header.css';
 import logo from './img/logo.png';
-import avatar from './img/avatar.png';
 
 const Header = ({ userData }) => {
   const history = useHistory();
@@ -28,7 +27,6 @@ const Header = ({ userData }) => {
   function renderLogueado() {
     return (
       <>
-        {/* <img src={avatar} className="avatar" /> */}
         <button className="header_log_out" onClick={logout}>
           Sign out
         </button>

@@ -1,11 +1,6 @@
 import React from 'react';
 import './HeaderDate.css';
 const HeaderDate = ({ date }) => {
-  console.log('date', date);
-  // let dateTest = new Date(date);
-  // console.log(dateTest.getMonth());
-  // console.log(dateTest.getDay());
-
   let months = [
     'Enero',
     'Febrero',

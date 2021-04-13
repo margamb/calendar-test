@@ -11,7 +11,6 @@ const SignIn = ({ setUserData }) => {
 
   function handleUserName(ev) {
     setUserName(ev.target.value);
-    console.log('name', userName);
   }
 
   function handlePassword(ev) {
@@ -24,8 +23,6 @@ const SignIn = ({ setUserData }) => {
       email: userName,
       password: password,
     });
-    console.error(error);
-    console.log(user);
 
     const userData = {
       email: user.email,
@@ -44,7 +41,6 @@ const SignIn = ({ setUserData }) => {
       </Link>
       <div className="signIn">
         <div className="sigIn_form">
-          {/* <img src={logo} className="logo"></img> */}
           <h2 className="title_signIn">Sign in</h2>
           <form className="signIn_form" onSubmit={handleFormSignIn}>
             <label htmlFor="name" className="form_label">

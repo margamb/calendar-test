@@ -46,7 +46,12 @@ const InfoDetailEvent = () => {
       </Link>
 
       <div className="info_detail">
-        <img className="info_detail_image" src={event.image} />
+        <img
+          className="info_detail_image"
+          src={event.image}
+          alt="Poster del evento"
+          title="Poster del evento"
+        />
         <div className="info_detail_text">
           <div className="info_detail_date">
             <h1 className="info_detail_title">{event.name}</h1>
