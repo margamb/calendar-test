@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import './Header.css';
-import logo from './img/logo.png';
+import logo from './img/agenda_peques_logo.svg';
 
 const Header = ({ userData }) => {
   const history = useHistory();
@@ -40,7 +40,8 @@ const Header = ({ userData }) => {
     <>
       <div className="header">
         <Link className="header_logo_container" to="/">
-          <img src={logo} className="header_logo" alt="logo" title="logo" />
+          {/* <img src={logo} className="header_logo" alt="logo" title="logo" /> */}
+          <div className="header_logo"></div>
         </Link>
 
         {userData === '' ? renderSign() : renderLogueado()}
