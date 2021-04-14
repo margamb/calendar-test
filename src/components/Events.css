@@ -45,15 +45,17 @@
 }
 
 .icon_delete {
-  width: 20px;
+  /* width: 20px; */
+  width: 25px;
   margin-left: 5px;
   fill: var(--gray-800);
   cursor: pointer;
 }
 
 .icon_edit {
-  width: 20px;
-  margin-left: 5px;
+  /* width: 20px; */
+  width: 25px;
+  margin-left: 25px;
   fill: var(--gray-800);
   cursor: pointer;
 }
