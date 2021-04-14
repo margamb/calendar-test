@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/calendar-test/static/css/main.036b4b3c.chunk.css",
-    "main.js": "/calendar-test/static/js/main.85d2e1ec.chunk.js",
-    "main.js.map": "/calendar-test/static/js/main.85d2e1ec.chunk.js.map",
+    "main.css": "/calendar-test/static/css/main.1db4f0bc.chunk.css",
+    "main.js": "/calendar-test/static/js/main.5e29ef36.chunk.js",
+    "main.js.map": "/calendar-test/static/js/main.5e29ef36.chunk.js.map",
     "runtime-main.js": "/calendar-test/static/js/runtime-main.26f05c6e.js",
     "runtime-main.js.map": "/calendar-test/static/js/runtime-main.26f05c6e.js.map",
     "static/js/2.f14b764d.chunk.js": "/calendar-test/static/js/2.f14b764d.chunk.js",
@@ -10,20 +10,20 @@
     "static/js/3.311b35ea.chunk.js": "/calendar-test/static/js/3.311b35ea.chunk.js",
     "static/js/3.311b35ea.chunk.js.map": "/calendar-test/static/js/3.311b35ea.chunk.js.map",
     "index.html": "/calendar-test/index.html",
-    "static/css/main.036b4b3c.chunk.css.map": "/calendar-test/static/css/main.036b4b3c.chunk.css.map",
+    "static/css/main.1db4f0bc.chunk.css.map": "/calendar-test/static/css/main.1db4f0bc.chunk.css.map",
     "static/js/2.f14b764d.chunk.js.LICENSE.txt": "/calendar-test/static/js/2.f14b764d.chunk.js.LICENSE.txt",
+    "static/media/Header.css": "/calendar-test/static/media/agenda_peques_logo_text.d3ed0410.svg",
     "static/media/InfoDetailEvent.css": "/calendar-test/static/media/footerImg.30caa73d.svg",
     "static/media/SignIn.css": "/calendar-test/static/media/rocket.64177cc1.svg",
     "static/media/events-img.89697887.svg": "/calendar-test/static/media/events-img.89697887.svg",
     "static/media/Events.css": "/calendar-test/static/media/globe.479c5c0c.svg",
     "static/media/CreateEvents.css": "/calendar-test/static/media/img-create-event-2.440d86a9.svg",
-    "static/media/logo.83b0457a.png": "/calendar-test/static/media/logo.83b0457a.png",
     "static/media/SignUp.css": "/calendar-test/static/media/sign-up-globe.259e49eb.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.26f05c6e.js",
     "static/js/2.f14b764d.chunk.js",
-    "static/css/main.036b4b3c.chunk.css",
-    "static/js/main.85d2e1ec.chunk.js"
+    "static/css/main.1db4f0bc.chunk.css",
+    "static/js/main.5e29ef36.chunk.js"
   ]
 }
