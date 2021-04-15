@@ -1,7 +1,7 @@
 .event_title {
   font-size: 16px;
   font-weight: 700;
-  max-width: 150px;
+  /* max-width: 150px; */
   overflow: visible;
   text-align: left;
   line-height: 20px;

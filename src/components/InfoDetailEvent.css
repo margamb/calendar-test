@@ -88,21 +88,25 @@
 }
 
 .icon_calendar {
-  width: 5%;
+  width: 20px;
   fill: var(--gray-800);
   margin-right: 10px;
 }
 
 .icon_clock {
-  width: 5%;
+  width: 20px;
   fill: var(--gray-800);
   margin-right: 10px;
 }
 
 .icon_items {
-  width: 5%;
+  width: 18px;
   fill: var(--gray-800);
   margin-right: 10px;
+}
+
+.icon_info {
+  width: 80%;
 }
 
 .title-items {

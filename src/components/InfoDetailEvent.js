@@ -67,26 +67,26 @@ const InfoDetailEvent = () => {
 
           <div className="info_detail_items">
             <IconLocation className="icon_items" />
-            <p>{city}</p>
+            <p className="icon_info">{city}</p>
           </div>
           <div className="info_detail_items">
             <IconLocation className="icon_items" />
-            <p>{address}</p>
+            <p className="icon_info">{address}</p>
           </div>
 
           <div className="info_detail_items">
             <IconTarget className="icon_items" />
-            <p>{age} años</p>
+            <p className="icon_info">{age} años</p>
           </div>
 
           <div className="info_detail_items">
             <IconZoomIn className="icon_items" />
-            <p>{information}</p>
+            <p className="icon_info">{information}</p>
           </div>
 
           <div className="info_detail_items">
             <IconLink className="icon_items" />
-            <p>{link}</p>
+            <p className="icon_info">{link}</p>
           </div>
           <div className="info_cat_img"></div>
         </div>
