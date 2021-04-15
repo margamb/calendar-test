@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/calendar-test/static/css/main.1db4f0bc.chunk.css",
-    "main.js": "/calendar-test/static/js/main.8b6e8147.chunk.js",
-    "main.js.map": "/calendar-test/static/js/main.8b6e8147.chunk.js.map",
+    "main.css": "/calendar-test/static/css/main.5f3eaf3e.chunk.css",
+    "main.js": "/calendar-test/static/js/main.cdb273a5.chunk.js",
+    "main.js.map": "/calendar-test/static/js/main.cdb273a5.chunk.js.map",
     "runtime-main.js": "/calendar-test/static/js/runtime-main.26f05c6e.js",
     "runtime-main.js.map": "/calendar-test/static/js/runtime-main.26f05c6e.js.map",
     "static/js/2.f14b764d.chunk.js": "/calendar-test/static/js/2.f14b764d.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.311b35ea.chunk.js": "/calendar-test/static/js/3.311b35ea.chunk.js",
     "static/js/3.311b35ea.chunk.js.map": "/calendar-test/static/js/3.311b35ea.chunk.js.map",
     "index.html": "/calendar-test/index.html",
-    "static/css/main.1db4f0bc.chunk.css.map": "/calendar-test/static/css/main.1db4f0bc.chunk.css.map",
+    "static/css/main.5f3eaf3e.chunk.css.map": "/calendar-test/static/css/main.5f3eaf3e.chunk.css.map",
     "static/js/2.f14b764d.chunk.js.LICENSE.txt": "/calendar-test/static/js/2.f14b764d.chunk.js.LICENSE.txt",
     "static/media/Header.css": "/calendar-test/static/media/agenda_peques_logo_text.d3ed0410.svg",
     "static/media/InfoDetailEvent.css": "/calendar-test/static/media/footerImg.30caa73d.svg",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.26f05c6e.js",
     "static/js/2.f14b764d.chunk.js",
-    "static/css/main.1db4f0bc.chunk.css",
-    "static/js/main.8b6e8147.chunk.js"
+    "static/css/main.5f3eaf3e.chunk.css",
+    "static/js/main.cdb273a5.chunk.js"
   ]
 }
