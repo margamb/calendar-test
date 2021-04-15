@@ -82,16 +82,17 @@ const CreateEvents = ({ userId }) => {
       user: userId,
     };
 
-    if (!location.state.ev.id) {
-      const { data, error } = await supabase.from('Events').insert([eventData]);
+    if (!location.state?.ev?.id) {
+      const { data } = await supabase.from('Events').insert([eventData]);
+      history.push('/events/' + data[0].id);
     } else {
-      const { data, error } = await supabase
+      await supabase
         .from('Events')
         .update(eventData)
         .eq('id', location.state.ev.id);
-    }
 
-    history.push('/events/' + location.state.ev.id);
+      history.push('/events/' + location.state.ev.id);
+    }
   }
 
   return (
