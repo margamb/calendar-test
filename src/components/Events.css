@@ -126,6 +126,7 @@
   .eventsTime {
     display: flex;
     width: 100%;
+    justify-content: center;
   }
 
   .event_list_1 {
@@ -140,7 +141,8 @@
   }
 
   .events {
-    width: 65%;
+    /* width: 65%; */
+    width: 50%;
     margin: 0;
   }
 
@@ -169,5 +171,6 @@
     background-position: center;
     margin-left: 55px;
     position: fixed;
+    margin-left: 0;
   }
 }

@@ -149,6 +149,7 @@ const CreateEvents = ({ userId }) => {
             <input
               type="text"
               id="name"
+              value={eventLink}
               className="event_form_input"
               placeholder="https://margamartinez.com/"
               onChange={handleEventLink}
@@ -171,6 +172,7 @@ const CreateEvents = ({ userId }) => {
               id="name"
               className="event_form_input"
               onChange={handleEventAge}
+              value={eventAge}
             />
             <label htmlFor="name" className="event_form_label">
               Población
@@ -180,6 +182,7 @@ const CreateEvents = ({ userId }) => {
               id="name"
               className="event_form_input"
               onChange={handleEventCity}
+              value={eventCity}
             />
             <label htmlFor="name" className="event_form_label">
               Dirección
@@ -190,6 +193,7 @@ const CreateEvents = ({ userId }) => {
               className="event_form_input"
               placeholder="Calle Martin n4"
               onChange={handleEventAddress}
+              value={eventAddress}
             />
             <label htmlFor="textarea" className="event_form_label">
               Información adicional:
@@ -199,6 +203,7 @@ const CreateEvents = ({ userId }) => {
               id="textarea"
               name="textarea"
               onChange={handleEventInformation}
+              value={eventInformation}
             ></textarea>
             <input
               type="submit"
