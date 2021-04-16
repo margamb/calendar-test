@@ -17,6 +17,9 @@
   position: fixed;
   right: 30px;
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .reset_info_signIn:hover {
@@ -89,6 +92,8 @@
   line-height: 20px;
   height: 40px;
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .signIn_btn:hover {

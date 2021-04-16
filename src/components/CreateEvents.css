@@ -21,6 +21,9 @@
   /* top: 100px; */
   right: 30px;
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .reset-Info-createEvent:hover {

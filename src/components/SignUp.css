@@ -22,6 +22,9 @@
   position: fixed;
   right: 30px;
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .reset-Info-SignUp:hover {
@@ -87,6 +90,8 @@
   height: 40px;
   text-align: center;
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .signUp_btn:hover {
