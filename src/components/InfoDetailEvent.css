@@ -18,6 +18,7 @@
   /* margin-top: 20px; */
   align-self: flex-end;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .info_detail_reset:hover {

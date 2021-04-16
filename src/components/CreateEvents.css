@@ -24,6 +24,7 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  text-decoration: none;
 }
 
 .reset-Info-createEvent:hover {
