@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import supabase from '../supabase';
 import './ListEvents.css';
 
-import { getTodayDate, groupByDate, sortObject } from '../utils';
+import { getTodayDate, groupByDate, sortObject } from '../utils/tools';
 import Events from './Events.js';
 
-const ListEvents = ({ userId }) => {
+const ListEvents = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const ListEvents = ({ userId }) => {
     return dates.map((date) => {
       return (
         <div className="event_list_1">
-          <Events events={events} date={date} userId={userId} />
+          <Events events={events} date={date} />
         </div>
       );
     });

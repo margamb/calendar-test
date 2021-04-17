@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import storage from '../utils/localStorage';
+import useUser from '../hooks/useUser';
 import './Header.css';
-import logo from './img/agenda_peques_logo.svg';
 
-const Header = ({ userData }) => {
+const Header = () => {
+  const [userData] = useUser();
   const history = useHistory();
 
   function logout() {
-    localStorage.removeItem('timekids-user');
+    storage.wipeUser();
     history.go(0);
   }
 
@@ -40,7 +42,6 @@ const Header = ({ userData }) => {
     <>
       <div className="header">
         <Link className="header_logo_container" to="/">
-          {/* <img src={logo} className="header_logo" alt="logo" title="logo" /> */}
           <div className="header_logo"></div>
         </Link>
 

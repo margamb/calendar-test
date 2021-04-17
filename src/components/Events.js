@@ -3,12 +3,14 @@ import './Events.css';
 import { Link, useHistory } from 'react-router-dom';
 import supabase from '../supabase';
 
+import useUser from '../hooks/useUser';
 import HeaderDate from './HeaderDate.js';
 import IconDelete from './img/IconDelete.js';
 import IconEdit from './img/IconEdit';
 
-const Events = ({ events, date, userId }) => {
+const Events = ({ events, date }) => {
   let history = useHistory();
+  const [user] = useUser();
 
   async function deleteEvents(id) {
     console.log('deleting', id);
@@ -32,7 +34,7 @@ const Events = ({ events, date, userId }) => {
             <div className="event_box_2">
               <p className="event_date">{time}</p>
               <div className="more_delete_btns">
-                {userId === ev.user && (
+                {user.id === ev.user && (
                   <div>
                     <Link to={{ pathname: '/createEvents', state: { ev } }}>
                       <IconEdit className="icon_edit" />

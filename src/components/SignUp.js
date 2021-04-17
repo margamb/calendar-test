@@ -3,8 +3,11 @@ import { useHistory, Link } from 'react-router-dom';
 import './SignUp.css';
 import IconReset from '../components/img/IconReset.js';
 import supabase from '../supabase';
+import storage from '../utils/localStorage';
+import useUser from '../hooks/useUser';
 
-const SignIn = ({ setUserData }) => {
+const SignIn = () => {
+  const [_, setUserData] = useUser();
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -36,7 +39,7 @@ const SignIn = ({ setUserData }) => {
         id: user.id,
       };
       setUserData(userData);
-      localStorage.setItem('timekids-user', JSON.stringify(userData));
+      storage.setUser(userData);
 
       history.push('/');
     }

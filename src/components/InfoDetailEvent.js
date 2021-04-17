@@ -8,7 +8,7 @@ import IconLink from '../components/img/IconLink.js';
 import IconZoomIn from '../components/img/IconZoomIn.js';
 import IconTarget from '../components/img/IconTarget.js';
 import IconReset from '../components/img/IconReset.js';
-import { formatDate } from '../utils';
+import { formatDate } from '../utils/tools';
 
 import supabase from '../supabase';
 

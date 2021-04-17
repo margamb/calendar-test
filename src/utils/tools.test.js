@@ -1,4 +1,4 @@
-import { groupByDate } from './index';
+import { groupByDate } from './tools';
 
 const ungrouped = [
   {
