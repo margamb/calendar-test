@@ -3,6 +3,7 @@ import { useHistory, Link } from 'react-router-dom';
 import './SignIn.css';
 import IconReset from '../components/img/IconReset.js';
 import supabase from '../supabase';
+import storage from '../utils/localStorage';
 
 const SignIn = ({ setUserData }) => {
   const [userName, setUserName] = useState('');
@@ -30,7 +31,7 @@ const SignIn = ({ setUserData }) => {
     };
 
     setUserData(userData);
-    localStorage.setItem('timekids-user', JSON.stringify(userData));
+    storage.setUser(userData);
     history.push('/');
   }
 

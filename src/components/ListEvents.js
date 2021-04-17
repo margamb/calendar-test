@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import supabase from '../supabase';
 import './ListEvents.css';
 
-import { getTodayDate, groupByDate, sortObject } from '../utils';
+import { getTodayDate, groupByDate, sortObject } from '../utils/tools';
 import Events from './Events.js';
 
 const ListEvents = ({ userId }) => {

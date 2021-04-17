@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import storage from '../utils/localStorage';
 import './Header.css';
 import logo from './img/agenda_peques_logo.svg';
 
@@ -7,7 +8,7 @@ const Header = ({ userData }) => {
   const history = useHistory();
 
   function logout() {
-    localStorage.removeItem('timekids-user');
+    storage.wipeUser();
     history.go(0);
   }
 

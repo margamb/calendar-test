@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
+import storage from '../utils/localStorage';
 import Header from './Header';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
@@ -13,9 +14,7 @@ function App() {
   const [userData, setUserData] = useState('');
 
   useEffect(() => {
-    console.log('mounting app', userData);
-    const user = JSON.parse(localStorage.getItem('timekids-user'));
-    console.log(user);
+    const user = storage.getUser();
 
     if (user !== null) {
       setUserData(user);
