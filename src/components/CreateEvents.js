@@ -4,8 +4,10 @@ import './CreateEvents.css';
 import supabase from '../supabase';
 import defaultImage from './img/events-img.svg';
 import IconReset from '../components/img/IconReset.js';
+import useUser from '../hooks/useUser';
 
-const CreateEvents = ({ userId }) => {
+const CreateEvents = () => {
+  const [user] = useUser();
   let location = useLocation();
 
   const [eventImg, setEventImg] = useState(
@@ -79,7 +81,7 @@ const CreateEvents = ({ userId }) => {
       address: eventAddress,
       information: eventInformation,
       hour: eventHour,
-      user: userId,
+      user: user.id,
     };
 
     if (!location.state?.ev?.id) {

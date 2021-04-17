@@ -4,8 +4,10 @@ import './SignUp.css';
 import IconReset from '../components/img/IconReset.js';
 import supabase from '../supabase';
 import storage from '../utils/localStorage';
+import useUser from '../hooks/useUser';
 
-const SignIn = ({ setUserData }) => {
+const SignIn = () => {
+  const [_, setUserData] = useUser();
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');

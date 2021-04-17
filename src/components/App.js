@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
-import storage from '../utils/localStorage';
 import Header from './Header';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
@@ -11,31 +10,21 @@ import ListEvents from './ListEvents';
 import InfoDetailEvent from './InfoDetailEvent';
 
 function App() {
-  const [userData, setUserData] = useState('');
-
-  useEffect(() => {
-    const user = storage.getUser();
-
-    if (user !== null) {
-      setUserData(user);
-    }
-  }, []);
-
   return (
     <div className="App">
-      <Header userData={userData} />
+      <Header />
       <Switch>
         <Route exact path="/">
-          <ListEvents userId={userData.id} />
+          <ListEvents />
         </Route>
         <Route path="/signIn">
-          <SignIn setUserData={setUserData} />
+          <SignIn />
         </Route>
         <Route path="/signUp">
-          <SignUp setUserData={setUserData} />
+          <SignUp />
         </Route>
         <Route path="/createEvents">
-          <CreateEvents userId={userData.id} />
+          <CreateEvents />
         </Route>
         <Route path="/events/:id">
           <InfoDetailEvent />
