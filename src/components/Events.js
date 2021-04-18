@@ -1,7 +1,7 @@
 import React from 'react';
 import './Events.css';
 import { Link, useHistory } from 'react-router-dom';
-import supabase from '../supabase';
+import api from '../utils/api';
 
 import useUser from '../hooks/useUser';
 import HeaderDate from './HeaderDate.js';
@@ -13,8 +13,7 @@ const Events = ({ events, date }) => {
   const [user] = useUser();
 
   async function deleteEvents(id) {
-    console.log('deleting', id);
-    const { data, error } = await supabase.from('Events').delete().eq('id', id);
+    await api.deleteEvent(id);
 
     history.go(0);
   }
@@ -23,7 +22,6 @@ const Events = ({ events, date }) => {
     <div>
       <HeaderDate date={date} />
       {events[date].map((ev) => {
-        console.log(ev);
         const time = ev.hour ? ev.hour.slice(0, -3) + 'h' : null;
         return (
           <div className="event" key={ev.id}>

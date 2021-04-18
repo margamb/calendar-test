@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import './SignUp.css';
 import IconReset from '../components/img/IconReset.js';
-import supabase from '../supabase';
+import api from '../utils/api';
 import storage from '../utils/localStorage';
 import useUser from '../hooks/useUser';
 
 const SignIn = () => {
+  // eslint-disable-next-line no-unused-vars
   const [_, setUserData] = useUser();
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
@@ -29,15 +30,13 @@ const SignIn = () => {
   async function handleFormSignUp(ev) {
     ev.preventDefault();
     if (password === confirmPassword) {
-      let { user, error } = await supabase.auth.signUp({
-        email: userName,
-        password: password,
-      });
+      let user = api.signUp({ email: userName, password });
 
       const userData = {
         email: user.email,
         id: user.id,
       };
+
       setUserData(userData);
       storage.setUser(userData);
 
