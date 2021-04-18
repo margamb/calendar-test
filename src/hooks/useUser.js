@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import storage from '../utils/localStorage';
 
 const useUser = () => {

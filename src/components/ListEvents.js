@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import supabase from '../supabase';
+import api from '../utils/api';
 import './ListEvents.css';
 
 import { getTodayDate, groupByDate, sortObject } from '../utils/tools';
@@ -7,21 +7,22 @@ import Events from './Events.js';
 
 const ListEvents = () => {
   const [events, setEvents] = useState([]);
+  const [status, setStatus] = useState('loading');
 
   useEffect(() => {
-    console.log('Mounting events');
-
-    const date = getTodayDate();
+    const today = getTodayDate();
 
     async function fetchData() {
-      let { data } = await supabase
-        .from('Events')
-        .select('*')
-        // filtrar eventos a partir de hoy
-        .gte('date', date);
+      let data = await api.getEventsFromDate(today);
       const grouped = groupByDate(data);
       const sorted = sortObject(grouped);
       setEvents(sorted);
+
+      if (data.length <= 0) {
+        setStatus('empty');
+      } else {
+        setStatus('loaded');
+      }
     }
     fetchData();
   }, []);
@@ -30,11 +31,19 @@ const ListEvents = () => {
     const dates = Object.keys(events);
     return dates.map((date) => {
       return (
-        <div className="event_list_1">
+        <div key={date} className="event_list_1">
           <Events events={events} date={date} />
         </div>
       );
     });
+  }
+
+  if (status === 'loading') {
+    return <div>Loading ...</div>;
+  }
+
+  if (status === 'empty') {
+    return <div>No events</div>;
   }
 
   return (

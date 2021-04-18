@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory, Link, useLocation } from 'react-router-dom';
 import './CreateEvents.css';
-import supabase from '../supabase';
+import api from '../utils/api';
 import defaultImage from './img/events-img.svg';
 import IconReset from '../components/img/IconReset.js';
 import useUser from '../hooks/useUser';
@@ -85,14 +85,10 @@ const CreateEvents = () => {
     };
 
     if (!location.state?.ev?.id) {
-      const { data } = await supabase.from('Events').insert([eventData]);
+      const data = await api.createEvent(eventData);
       history.push('/events/' + data[0].id);
     } else {
-      await supabase
-        .from('Events')
-        .update(eventData)
-        .eq('id', location.state.ev.id);
-
+      await api.updateEvent(location.state.ev.id, eventData);
       history.push('/events/' + location.state.ev.id);
     }
   }

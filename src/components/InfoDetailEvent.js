@@ -10,7 +10,7 @@ import IconTarget from '../components/img/IconTarget.js';
 import IconReset from '../components/img/IconReset.js';
 import { formatDate } from '../utils/tools';
 
-import supabase from '../supabase';
+import api from '../utils/api';
 
 const InfoDetailEvent = () => {
   const [event, setEvent] = useState({});
@@ -19,11 +19,11 @@ const InfoDetailEvent = () => {
 
   useEffect(() => {
     async function fetchData() {
-      let { data } = await supabase.from('Events').select('*').eq('id', id);
+      let data = await api.getEventDetails(id);
       setEvent(...data);
     }
     fetchData();
-  }, []);
+  }, [id]);
 
   const age = event.age ? event.age : '- -';
   const city = event.city ? event.city : '- -';
