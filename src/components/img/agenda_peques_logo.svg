@@ -20,22 +20,22 @@
         <g transform="matrix(0.969678,0,0,0.999619,318.501,171.655)">
             <ellipse cx="512.705" cy="416.288" rx="35.852" ry="35.502"/>
         </g>
-        <g transform="matrix(1,0,0,1,176.797,171.497)">
+        <g className="eyes-Agenda" transform="matrix(1,0,0,1,176.797,171.497)">
             <ellipse cx="523.332" cy="401.437" rx="12.483" ry="11.999" style="fill:white;"/>
         </g>
-        <g transform="matrix(1,0,0,1,301.53,171.497)">
+        <g  className="eyes-Agenda" transform="matrix(1,0,0,1,301.53,171.497)">
             <ellipse cx="523.332" cy="401.437" rx="12.483" ry="11.999" style="fill:white;"/>
         </g>
-        <g transform="matrix(1,0,0,1,176.797,171.497)">
+        <g  className="eyes-Agenda" transform="matrix(1,0,0,1,176.797,171.497)">
             <ellipse cx="503.248" cy="439.123" rx="3.724" ry="4.173" style="fill:white;"/>
         </g>
-        <g transform="matrix(1,0,0,1,301.53,171.497)">
+        <g className="eyes-Agenda" transform="matrix(1,0,0,1,301.53,171.497)">
             <ellipse cx="503.248" cy="439.123" rx="3.724" ry="4.173" style="fill:white;"/>
         </g>
-        <g transform="matrix(1,0,0,1,176.797,171.497)">
+        <g  className="eyes-Agenda" transform="matrix(1,0,0,1,176.797,171.497)">
             <ellipse cx="492.882" cy="430.995" rx="6.348" ry="6.641" style="fill:white;"/>
         </g>
-        <g transform="matrix(1,0,0,1,301.53,171.497)">
+        <g className="eyes-Agenda" transform="matrix(1,0,0,1,301.53,171.497)">
             <ellipse cx="492.882" cy="430.995" rx="6.348" ry="6.641" style="fill:white;"/>
         </g>
         <g transform="matrix(1,0,0,1,176.797,171.497)">

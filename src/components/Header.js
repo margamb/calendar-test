@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import storage from '../utils/localStorage';
 import useUser from '../hooks/useUser';
@@ -25,6 +25,10 @@ const Header = () => {
       </>
     );
   }
+
+  // useEffect(() => {
+  //   renderLogueado();
+  // }, [[userData]]);
 
   function renderLogueado() {
     return (

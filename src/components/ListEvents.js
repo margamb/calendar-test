@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from '../utils/api';
 import './ListEvents.css';
+import Loading from './Loading.js';
 
 import { getTodayDate, groupByDate, sortObject } from '../utils/tools';
 import Events from './Events.js';
@@ -24,7 +25,7 @@ const ListEvents = () => {
         setStatus('loaded');
       }
     }
-    fetchData();
+    // fetchData();
   }, []);
 
   function renderEvents() {
@@ -39,7 +40,7 @@ const ListEvents = () => {
   }
 
   if (status === 'loading') {
-    return <div>Loading ...</div>;
+    return <Loading />;
   }
 
   if (status === 'empty') {
