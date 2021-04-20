@@ -84,12 +84,16 @@ const CreateEvents = ({ userId }) => {
 
     if (!location.state?.ev?.id) {
       const data = await api.createEvent(eventData);
-      history.push('/events/' + data[0].id);
+      history.push('/');
+      //history.push('/events/' + data[0].id);
     } else {
       await api.updateEvent(location.state.ev.id, eventData);
-      history.push('/events/' + location.state.ev.id);
+      history.push('/');
+      // history.push('/events/' + location.state.ev.id);
     }
   }
+
+  const isSubmitDisabled = !eventName || !eventHour || !eventDate;
 
   return (
     <>
@@ -135,9 +139,10 @@ const CreateEvents = ({ userId }) => {
               className="event_form_input"
               type="text"
               id="name"
-              placeholder="17:00"
+              placeholder="Ej: 17:00"
               onChange={handleEventHour}
               value={eventHour}
+              required
             ></input>
             <label className="event_form_label" htmlFor="text">
               Link del evento
@@ -159,6 +164,7 @@ const CreateEvents = ({ userId }) => {
               id="name"
               className="event_form_input"
               onChange={handleEventName}
+              required
             />
             <label htmlFor="name" className="event_form_label">
               Edad recomendada
@@ -205,6 +211,7 @@ const CreateEvents = ({ userId }) => {
               type="submit"
               value={location?.state?.ev?.id ? 'Editar evento' : 'Crear evento'}
               className="event_btn"
+              disabled={isSubmitDisabled}
             />
           </form>
         </div>

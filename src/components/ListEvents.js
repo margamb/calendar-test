@@ -5,6 +5,7 @@ import Loading from './Loading.js';
 
 import { getTodayDate, groupByDate, sortObject } from '../utils/tools';
 import Events from './Events.js';
+import EmptyEvents from './EmptyEvents.js';
 
 const ListEvents = ({ userId }) => {
   const [events, setEvents] = useState([]);
@@ -44,7 +45,7 @@ const ListEvents = ({ userId }) => {
   }
 
   if (status === 'empty') {
-    return <div>No events</div>;
+    return <EmptyEvents />;
   }
 
   return (
