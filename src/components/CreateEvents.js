@@ -4,10 +4,8 @@ import './CreateEvents.css';
 import api from '../utils/api';
 import defaultImage from './img/events-img.svg';
 import IconReset from '../components/img/IconReset.js';
-import useUser from '../hooks/useUser';
 
-const CreateEvents = () => {
-  const [user] = useUser();
+const CreateEvents = ({ userId }) => {
   let location = useLocation();
 
   const [eventImg, setEventImg] = useState(
@@ -81,7 +79,7 @@ const CreateEvents = () => {
       address: eventAddress,
       information: eventInformation,
       hour: eventHour,
-      user: user.id,
+      user: userId,
     };
 
     if (!location.state?.ev?.id) {

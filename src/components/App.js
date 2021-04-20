@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
@@ -10,21 +10,31 @@ import ListEvents from './ListEvents';
 import InfoDetailEvent from './InfoDetailEvent';
 
 function App() {
+  const [userData, setUserData] = useState('');
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('timekids-user'));
+
+    if (user !== null) {
+      setUserData(user);
+    }
+  }, []);
+
   return (
     <div className="App">
-      <Header />
+      <Header userData={userData} />
       <Switch>
         <Route exact path="/">
-          <ListEvents />
+          <ListEvents userId={userData.id} />
         </Route>
         <Route path="/signIn">
-          <SignIn />
+          <SignIn setUserData={setUserData} />
         </Route>
         <Route path="/signUp">
-          <SignUp />
+          <SignUp setUserData={setUserData} />
         </Route>
         <Route path="/createEvents">
-          <CreateEvents />
+          <CreateEvents userId={userData.id} />
         </Route>
         <Route path="/events/:id">
           <InfoDetailEvent />
