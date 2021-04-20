@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/calendar-test/static/css/main.cf81ff15.chunk.css",
-    "main.js": "/calendar-test/static/js/main.5686056b.chunk.js",
-    "main.js.map": "/calendar-test/static/js/main.5686056b.chunk.js.map",
-    "runtime-main.js": "/calendar-test/static/js/runtime-main.26f05c6e.js",
-    "runtime-main.js.map": "/calendar-test/static/js/runtime-main.26f05c6e.js.map",
-    "static/js/2.f14b764d.chunk.js": "/calendar-test/static/js/2.f14b764d.chunk.js",
-    "static/js/2.f14b764d.chunk.js.map": "/calendar-test/static/js/2.f14b764d.chunk.js.map",
-    "static/js/3.311b35ea.chunk.js": "/calendar-test/static/js/3.311b35ea.chunk.js",
-    "static/js/3.311b35ea.chunk.js.map": "/calendar-test/static/js/3.311b35ea.chunk.js.map",
+    "main.css": "/calendar-test/static/css/main.4dd1ec6a.chunk.css",
+    "main.js": "/calendar-test/static/js/main.e9bed6d4.chunk.js",
+    "main.js.map": "/calendar-test/static/js/main.e9bed6d4.chunk.js.map",
+    "runtime-main.js": "/calendar-test/static/js/runtime-main.ae06a519.js",
+    "runtime-main.js.map": "/calendar-test/static/js/runtime-main.ae06a519.js.map",
+    "static/js/2.3b214d61.chunk.js": "/calendar-test/static/js/2.3b214d61.chunk.js",
+    "static/js/2.3b214d61.chunk.js.map": "/calendar-test/static/js/2.3b214d61.chunk.js.map",
+    "static/js/3.88d2e005.chunk.js": "/calendar-test/static/js/3.88d2e005.chunk.js",
+    "static/js/3.88d2e005.chunk.js.map": "/calendar-test/static/js/3.88d2e005.chunk.js.map",
     "index.html": "/calendar-test/index.html",
-    "static/css/main.cf81ff15.chunk.css.map": "/calendar-test/static/css/main.cf81ff15.chunk.css.map",
-    "static/js/2.f14b764d.chunk.js.LICENSE.txt": "/calendar-test/static/js/2.f14b764d.chunk.js.LICENSE.txt",
+    "static/css/main.4dd1ec6a.chunk.css.map": "/calendar-test/static/css/main.4dd1ec6a.chunk.css.map",
+    "static/js/2.3b214d61.chunk.js.LICENSE.txt": "/calendar-test/static/js/2.3b214d61.chunk.js.LICENSE.txt",
     "static/media/Header.css": "/calendar-test/static/media/agenda_peques_logo_text.d3ed0410.svg",
     "static/media/InfoDetailEvent.css": "/calendar-test/static/media/footerImg.30caa73d.svg",
     "static/media/SignIn.css": "/calendar-test/static/media/rocket.64177cc1.svg",
@@ -21,9 +21,9 @@
     "static/media/SignUp.css": "/calendar-test/static/media/sign-up-globe.259e49eb.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.26f05c6e.js",
-    "static/js/2.f14b764d.chunk.js",
-    "static/css/main.cf81ff15.chunk.css",
-    "static/js/main.5686056b.chunk.js"
+    "static/js/runtime-main.ae06a519.js",
+    "static/js/2.3b214d61.chunk.js",
+    "static/css/main.4dd1ec6a.chunk.css",
+    "static/js/main.e9bed6d4.chunk.js"
   ]
 }
