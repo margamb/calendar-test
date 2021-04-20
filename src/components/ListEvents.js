@@ -6,7 +6,7 @@ import Loading from './Loading.js';
 import { getTodayDate, groupByDate, sortObject } from '../utils/tools';
 import Events from './Events.js';
 
-const ListEvents = () => {
+const ListEvents = ({ userId }) => {
   const [events, setEvents] = useState([]);
   const [status, setStatus] = useState('loading');
 
@@ -25,7 +25,7 @@ const ListEvents = () => {
         setStatus('loaded');
       }
     }
-    // fetchData();
+    fetchData();
   }, []);
 
   function renderEvents() {
@@ -33,7 +33,7 @@ const ListEvents = () => {
     return dates.map((date) => {
       return (
         <div key={date} className="event_list_1">
-          <Events events={events} date={date} />
+          <Events events={events} date={date} userId={userId} />
         </div>
       );
     });

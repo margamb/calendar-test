@@ -4,11 +4,9 @@ import './SignIn.css';
 import IconReset from '../components/img/IconReset.js';
 import api from '../utils/api';
 import storage from '../utils/localStorage';
-import useUser from '../hooks/useUser';
 
-const SignIn = () => {
+const SignIn = ({ setUserData }) => {
   // eslint-disable-next-line no-unused-vars
-  const [_, setUserData] = useUser();
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   let history = useHistory();
