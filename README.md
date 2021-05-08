@@ -2,6 +2,8 @@
 
 A calendar app I created to improve my react and javascript.
 
+![Calendar wireframe](./src/components/img/wireframe.jpg)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## How it works
