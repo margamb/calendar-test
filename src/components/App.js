@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
 import Header from './Header';
+import Footer from './Footer';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import CreateEvents from './CreateEvents';
@@ -40,6 +41,7 @@ function App() {
           <InfoDetailEvent />
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }

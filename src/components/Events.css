@@ -7,6 +7,10 @@
   line-height: 20px;
 }
 
+.eventsTime { 
+  height: 540px;
+}
+
 .event_date {
   font-size: 14px;
   color: var(--gray-800);
@@ -127,6 +131,8 @@
     display: flex;
     width: 100%;
     justify-content: center;
+    /* height: 550px; */
+    height: 540px;
   }
 
   .event_list_1 {
@@ -135,7 +141,6 @@
   }
 
   .event_list_2 {
-    background-color: green;
     width: 30%;
     height: 100%;
   }
