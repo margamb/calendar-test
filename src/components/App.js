@@ -8,6 +8,7 @@ import SignUp from './SignUp';
 import CreateEvents from './CreateEvents';
 import ListEvents from './ListEvents';
 import InfoDetailEvent from './InfoDetailEvent';
+import Confirmation from './Confirmation';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
         </Route>
         <Route path="/events/:id">
           <InfoDetailEvent />
+        </Route>
+        <Route path="/confirmation">
+          <Confirmation />
         </Route>
       </Switch>
     </div>

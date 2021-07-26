@@ -40,7 +40,7 @@ const SignIn = () => {
         setUserData(userData);
       }
 
-      history.push('/');
+      history.push('/confirmation');
     }
   }
 
