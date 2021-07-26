@@ -3,10 +3,11 @@ import { useHistory, Link } from 'react-router-dom';
 import './SignUp.css';
 import IconReset from '../components/img/IconReset.js';
 import api from '../utils/api';
-import storage from '../utils/localStorage';
+import useUser from '../hooks/useUser'
 
-const SignIn = ({ setUserData }) => {
+const SignIn = () => {
   // eslint-disable-next-line no-unused-vars
+  const [_userData, setUserData] = useUser()
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -35,8 +36,9 @@ const SignIn = ({ setUserData }) => {
         id: user.id,
       };
 
-      setUserData(userData);
-      storage.setUser(userData);
+      if (userData.email && userData.id) {
+        setUserData(userData);
+      }
 
       history.push('/');
     }

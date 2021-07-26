@@ -3,16 +3,18 @@ import { useHistory, Link } from 'react-router-dom';
 import './SignIn.css';
 import IconReset from '../components/img/IconReset.js';
 import api from '../utils/api';
-import storage from '../utils/localStorage';
+import useUser from '../hooks/useUser'
 
-const SignIn = ({ setUserData }) => {
-  // eslint-disable-next-line no-unused-vars
-  const [userName, setUserName] = useState('');
+const SignIn = () => {
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  // eslint-disable-next-line no-unused-vars
+  const [_user, setUser] = useUser()
+
   let history = useHistory();
 
   function handleUserName(ev) {
-    setUserName(ev.target.value);
+    setEmail(ev.target.value);
   }
 
   function handlePassword(ev) {
@@ -21,19 +23,20 @@ const SignIn = ({ setUserData }) => {
 
   async function handleFormSignIn(ev) {
     ev.preventDefault();
-    let user = await api.signIn({
-      email: userName,
-      password: password,
+    let userFromApi = await api.signIn({
+      email,
+      password
     });
 
     const userData = {
-      email: user.email,
-      id: user.id,
+      email: userFromApi.email,
+      id: userFromApi.id,
     };
 
-    setUserData(userData);
-    storage.setUser(userData);
+    await setUser(userData);
+    // storage.setUser(userData);
     history.push('/');
+    history.go(0);
   }
 
   return (

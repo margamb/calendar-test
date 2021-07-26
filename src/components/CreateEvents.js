@@ -4,8 +4,10 @@ import './CreateEvents.css';
 import api from '../utils/api';
 import defaultImage from './img/events-img.svg';
 import IconReset from '../components/img/IconReset.js';
+import useUser from '../hooks/useUser'
 
-const CreateEvents = ({ userId }) => {
+const CreateEvents = () => {
+  const [user] = useUser()
   let location = useLocation();
 
   const [eventImg, setEventImg] = useState(
@@ -79,17 +81,15 @@ const CreateEvents = ({ userId }) => {
       address: eventAddress,
       information: eventInformation,
       hour: eventHour,
-      user: userId,
+      user: user.id,
     };
 
     if (!location.state?.ev?.id) {
-      const data = await api.createEvent(eventData);
+      await api.createEvent(eventData);
       history.push('/');
-      //history.push('/events/' + data[0].id);
     } else {
       await api.updateEvent(location.state.ev.id, eventData);
       history.push('/');
-      // history.push('/events/' + location.state.ev.id);
     }
   }
 

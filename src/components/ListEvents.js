@@ -7,7 +7,7 @@ import { getTodayDate, groupByDate, sortObject } from '../utils/tools';
 import Events from './Events.js';
 import EmptyEvents from './EmptyEvents.js';
 
-const ListEvents = ({ userId }) => {
+const ListEvents = () => {
   const [events, setEvents] = useState([]);
   const [status, setStatus] = useState('loading');
 
@@ -34,7 +34,7 @@ const ListEvents = ({ userId }) => {
     return dates.map((date) => {
       return (
         <div key={date} className="event_list_1">
-          <Events events={events} date={date} userId={userId} />
+          <Events events={events} date={date} />
         </div>
       );
     });
