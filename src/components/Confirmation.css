@@ -127,6 +127,7 @@
     margin-top: 20px;
     width: 400px;
     margin-inline: auto;
+    margin-bottom: 16px;
 
 }
 
@@ -141,7 +142,10 @@
     font-size: 14px;
     font-weight: 700;
     line-height: 20px;
-    margin-top: 20px;
+    text-decoration: none;
+    margin-inline: auto;
+
+
 }
 
 .back:hover {

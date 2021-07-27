@@ -8,7 +8,8 @@ import useUser from '../hooks/useUser'
 
 const CreateEvents = () => {
   const [user] = useUser()
-  let location = useLocation();
+  const location = useLocation();
+  const history = useHistory();
 
   const [eventImg, setEventImg] = useState(
     location?.state?.ev?.image || defaultImage
@@ -27,47 +28,29 @@ const CreateEvents = () => {
     location?.state?.ev?.information || ''
   );
 
-  const [eventHour, setEventHour] = useState(
+  const [eventTime, setEventTime] = useState(
     (location?.state?.ev?.hour && location?.state?.ev?.hour.slice(0, -3)) || ''
   );
 
-  let history = useHistory();
 
-  function handleEventImg(ev) {
-    setEventImg(ev.target.value);
+  const formHandlers = {
+    eventAddress: setEventAddress,
+    eventAge: setEventAge,
+    eventCity: setEventCity,
+    eventDate: setEventDate,
+    eventTime: setEventTime,
+    eventImage: setEventImg,
+    eventInformation: setEventInformation,
+    eventLink: setEventLink,
+    eventName: setEventName,
+    default: () => {console.warn('No event handler')}
   }
 
-  function handleEventDate(ev) {
-    setEventDate(ev.target.value);
+  function handleInputChange(ev) {
+    const fn = formHandlers[ev.target.id] || formHandlers.default
+    fn(ev.target.value)
   }
 
-  function handleEventLink(ev) {
-    setEventLink(ev.target.value);
-  }
-
-  function handleEventName(ev) {
-    setEventName(ev.target.value);
-  }
-
-  function handleEventAge(ev) {
-    setEventAge(ev.target.value);
-  }
-
-  function handleEventCity(ev) {
-    setEventCity(ev.target.value);
-  }
-
-  function handleEventAddress(ev) {
-    setEventAddress(ev.target.value);
-  }
-
-  function handleEventInformation(ev) {
-    setEventInformation(ev.target.value);
-  }
-
-  function handleEventHour(ev) {
-    setEventHour(ev.target.value);
-  }
 
   async function handleFormEvent(ev) {
     ev.preventDefault();
@@ -80,7 +63,7 @@ const CreateEvents = () => {
       city: eventCity,
       address: eventAddress,
       information: eventInformation,
-      hour: eventHour,
+      hour: eventTime,
       user: user.id,
     };
 
@@ -93,7 +76,7 @@ const CreateEvents = () => {
     }
   }
 
-  const isSubmitDisabled = !eventName || !eventHour || !eventDate;
+  const isSubmitDisabled = !eventName || !eventTime || !eventDate;
 
   return (
     <>
@@ -107,104 +90,104 @@ const CreateEvents = () => {
         <div className="form_event">
           <h2 className="create_event_title">Crear Evento</h2>
           <form className="event_form" onSubmit={handleFormEvent}>
-            <label className="event_form_label" htmlFor="text">
+            <label className="event_form_label" htmlFor="eventImage">
               Imagen del evento
             </label>
             <input
               type="text"
-              id="name"
+              id="eventImage"
               className="event_form_input"
               placeholder="url de la imagen"
               value={eventImg}
-              onChange={handleEventImg}
+              onChange={handleInputChange}
             />
-            <label htmlFor="start" className="event_form_label">
+            <label htmlFor="eventDate" className="event_form_label">
               Fecha
             </label>
             <input
               className="event_form_input"
               type="date"
-              id="start"
+              id="eventDate"
               name="trip-start"
               placeholder={Date.now()}
               value={eventDate}
               min={Date.now()}
               max="2021-12-31"
-              onChange={handleEventDate}
+              onChange={handleInputChange}
             ></input>
-            <label htmlFor="start" className="event_form_label">
+            <label htmlFor="eventTime" className="event_form_label">
               Hora
             </label>
             <input
               className="event_form_input"
               type="text"
-              id="name"
+              id="eventTime"
               placeholder="Ej: 17:00"
-              onChange={handleEventHour}
-              value={eventHour}
+              onChange={handleInputChange}
+              value={eventTime}
               required
             ></input>
-            <label className="event_form_label" htmlFor="text">
+            <label className="event_form_label" htmlFor="eventLink">
               Link del evento
             </label>
             <input
               type="text"
-              id="name"
+              id="eventLink"
               value={eventLink}
               className="event_form_input"
               placeholder="https://margamartinez.com/"
-              onChange={handleEventLink}
+              onChange={handleInputChange}
             />
-            <label htmlFor="name" className="event_form_label">
+            <label htmlFor="eventName" className="event_form_label">
               Nombre del Evento
             </label>
             <input
               value={eventName}
               type="text"
-              id="name"
+              id="eventName"
               className="event_form_input"
-              onChange={handleEventName}
+              onChange={handleInputChange}
               required
             />
-            <label htmlFor="name" className="event_form_label">
+            <label htmlFor="eventAge" className="event_form_label">
               Edad recomendada
             </label>
             <input
               type="text"
-              id="name"
+              id="eventAge"
               className="event_form_input"
-              onChange={handleEventAge}
+              onChange={handleInputChange}
               value={eventAge}
             />
-            <label htmlFor="name" className="event_form_label">
+            <label htmlFor="eventCity" className="event_form_label">
               Población
             </label>
             <input
               type="text"
-              id="name"
+              id="eventCity"
               className="event_form_input"
-              onChange={handleEventCity}
+              onChange={handleInputChange}
               value={eventCity}
             />
-            <label htmlFor="name" className="event_form_label">
+            <label htmlFor="eventAddress" className="event_form_label">
               Dirección
             </label>
             <input
               type="text"
-              id="name"
+              id="eventAddress"
               className="event_form_input"
               placeholder="Calle Martin n4"
-              onChange={handleEventAddress}
+              onChange={handleInputChange}
               value={eventAddress}
             />
-            <label htmlFor="textarea" className="event_form_label">
+            <label htmlFor="eventInformation" className="event_form_label">
               Información adicional:
             </label>
             <textarea
               className="event_form_input"
-              id="textarea"
+              id="eventInformation"
               name="textarea"
-              onChange={handleEventInformation}
+              onChange={handleInputChange}
               value={eventInformation}
             ></textarea>
             <input
