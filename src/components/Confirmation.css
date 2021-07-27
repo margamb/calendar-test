@@ -1,14 +1,20 @@
+.confirmation_container {
+    /* background-color: red; */
+    width: 100%;
+    margin-inline: auto;
+}
+
 .confirmation {
     /* background-color: brown; */
     margin-inline: auto;
-    margin-top: 60px;
+    margin-top: 20px;
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.envelop {
+.envelope {
     /* margin: 20px; */
     width: 300px;
     height: 300px;
@@ -17,7 +23,7 @@
     
 }
 
-.envelop_back {
+.envelope_back {
     width: 250px;
     height: 150px;
     border-radius: 0 0 20px 20px;
@@ -29,7 +35,7 @@
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.envelop_left {
+.envelope_left {
     width: 0px;
     height: 0px;
     border-top: 90px solid transparent;
@@ -38,7 +44,7 @@
   
 }
 
-.envelop_right {
+.envelope_right {
     width: 0px;
     height: 0px;
     border-top: 90px solid transparent;
@@ -47,7 +53,7 @@
 }
 
 
-.envelop_bottom {
+.envelope_bottom {
     width: 250px;
     height: 74px;
     border-radius: 0 0 20px 20px;
@@ -58,26 +64,34 @@
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, #ddbea9);
 }
 
-.envelop_loading {
+.envelope_loading_up {
+    /* width: 300px;
+    height: 570px;
     position: absolute;
     top: -203px;
-    left: -20px;
+    left: -20px; */
+    width: 150px;
+    /* height: 570px; */
+    position: absolute;
+    top: -3px;
+    left: 54px;     
     animation-name: up;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     transition-timing-function: ease-out;
 }
 
-.loading_container {
+/* .loading_container {
     width: 300px;
     height: 570px;
-    /* background: var(--gray-500); */
-    /* display: flex;
+    background: var(--gray-500);
+    display: flex;
     justify-content: center;
-    align-items: center; */
-}
+    align-items: center; 
+    margin-inline: auto;
+} */
 
-.envelop_up {
+.envelope_up {
     width: 0px;
     height: 0px;
     border-left: 125px solid transparent;
@@ -95,7 +109,7 @@
     transition-timing-function: ease-out;
 }
 
-.envelop_up_1 {
+.envelope_up_1 {
     width: 0px;
     height: 0px;
     border-left: 125px solid transparent;
@@ -143,16 +157,22 @@
     font-weight: 700;
     line-height: 20px;
     text-decoration: none;
-    margin-inline: auto;
-
-
+    margin: 0
+    /* margin-inline: auto; */
 }
 
 .back:hover {
     opacity: 0.7;
 }
 
-
+.back_container {
+    width: 80%;
+    /* background-color: blue; */
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    text-decoration: none
+}
       
 @keyframes open {
     25% {
@@ -194,18 +214,18 @@
 
 @keyframes up {
         25% {
-            top: -203px;
+            top: -5px;
         }
         30% {
-            top: -205px;
+            top: -20px;
             
         }
         40% {
             
-            top: -220px;
+            top: -30px;
         }
         100% {
-            top: -263px;
+            top: -35px;
             z-index: 1;
         }
 }

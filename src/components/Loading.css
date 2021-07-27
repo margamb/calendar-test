@@ -1,14 +1,14 @@
 .loading_container {
-  width: 100vw;
-  height: 85vh;
-  /* background: var(--gray-500); */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+height: 570px;
+/* background: var(--gray-500); */
+display: flex;
+justify-content: center;
+align-items: center;
+margin-inline: auto;
 }
 
-.loading_img {
-  /* width: 40%; */
+/* .loading_img {
+  width: 40%; 
   height: 30%;
 }
 
@@ -32,4 +32,4 @@
   100% {
     fill: var(--white);
   }
-}
+} */
