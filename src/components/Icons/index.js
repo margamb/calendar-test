@@ -1,0 +1,9 @@
+export {default as CalendarIcon} from './Calendar';
+export {default as ClockIcon} from './Clock';
+export {default as CrossIcon} from './Cross';
+export {default as LinkIcon} from './Link';
+export {default as LocationIcon} from './Location';
+export {default as LoupeIcon} from './Loupe';
+export {default as PencilIcon} from './Pencil';
+export {default as TargetIcon} from './Target';
+export {default as TrashIcon} from './Trash';

@@ -2,7 +2,9 @@
 
 A calendar app I created to improve my react and javascript.
 
-![Calendar wireframe](./src/components/img/wireframe.jpg)
+I always start with a wireframe of the project to get a general idea of what I want to include and the flow. I like doing it on paper, I don't use a computer to avoid temptation to mix ornament design (like border-shadow...) in this part.
+
+![Calendar wireframe](./readme/wireframe.jpg)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -17,6 +19,29 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - HTML
 - CSS
 - Supabase
+
+## Responsive design.
+
+I create a logo with text and without to adapt a small and big screen 
+
+![Logo agenda peques](./readme/logos.png)
+
+Responsive components design 
+
+- Home screen
+    This component show all the events. The events that a user creates have the option to delete and edit them once you are successful.
+
+![Home screen](./readme/events.png)
+
+- Sign in component
+    I created two diffents illustrations to use in small and big screen
+
+![Sign in](./readme/sign_in.png)
+
+
+
+---- Loading / envelope
+
 
 ## What I have learned
 
