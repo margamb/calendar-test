@@ -2,6 +2,19 @@
 
 A calendar app I created to improve my react and javascript.
 
+## Challenges -> Start all app from 0.
+
+- How to design a calendar/event list with as few clicks as posible and user friendly.
+- How to sort all the information I need to develop the app into componets and their relationship to each other.
+- Understand supabase and how it is used. Supabase is awesome, it has a great user design, because of that it is easier to understand what I am doing and to learn.
+- How create a component where I control all the fetch and post.
+- Use react-router.
+- UX/UI desig.
+- Responsive design.
+
+
+## Steps 
+
 I always start with a wireframe of the project to get a general idea of what I want to include and the flow. I like doing it on paper, I don't use a computer to avoid temptation to mix ornament design (like border-shadow...) in this part.
 
 ![Calendar wireframe](./readme/wireframe.jpg)
@@ -29,18 +42,57 @@ I create a logo with text and without to adapt a small and big screen
 Responsive components design 
 
 - Home screen
-    This component show all the events. The events that a user creates have the option to delete and edit them once you are successful.
+    This component show all the events. The events that a user creates have the option to delete and edit them once you are successful. Here is more useful to know about how to use supabase (authentication, database) ;).
 
 ![Home screen](./readme/events.png)
 
 - Sign in component
+    
     I created two diffents illustrations to use in small and big screen
 
 ![Sign in](./readme/sign_in.png)
 
+- Sign up component
+
+    I did two differents illustrations to small and big screen
+
+![Sign up](./readme/sign_up.png)
+
+- Create events components.
+
+    I designed two differents screens. I created a illustrations two desktop.
+
+![create events](./readme/create_events.png)
+
+- Information event component.
+
+![information events](./readme/info.png)
 
 
----- Loading / envelope
+
+## CSS Animations
+
+There are 3 states when the app is charged. It can be loading, loaded and without events. I did two svg animations, loading and empty events and the third animations is about when people sign up and has to check the email.
+
+![animations](./readme/animations.png)
+
+Email confirm animation.
+
+![envelop animation](./readme/gif_envelop.gif)
+
+Loading animation.
+
+![loading animation](./readme/gif_loading.gif)
+
+Empty events animation.
+
+![empty events animation](./readme/gif_empty_events.gif)
+
+## Colors 
+
+I always start designing in black and white. It's the best option to find  a design  with balance and rhythm to make an order and their relationships . Then I make a color palette depending on the target. I don't use a color big palette when we use fewer colours we make greater use of creativity and achieve better results.
+
+![colors](./readme/colors.png)
 
 
 ## What I have learned
