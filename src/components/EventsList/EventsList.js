@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../utils/api';
 import './EventsList.css';
-import Loading from '../Loading.js';
+import { Loading } from '../';
 
 import { getTodayDate, groupByDate, sortObject } from '../../utils/tools';
 import {EmptyEvents, EventsListItem} from '../';

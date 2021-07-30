@@ -1,5 +1,5 @@
 import React from 'react';
-import {AnimatedLogo} from './'
+import {AnimatedLogo} from '../'
 import './Loading.css'
 
 const Loading = () => {
