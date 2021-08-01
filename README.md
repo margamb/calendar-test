@@ -12,7 +12,7 @@ The objectives I set for myself were:
 
 - Designing a calendar/event list app, that is user friendly, to show and improve my **UX/UI design skills**.
 - Sorting all the information needed to develop the app into **reusable components**.
-- Understanding supabase and how it is used. Supabase has great user design, so it simplifies the **backend** and I can understand backend concepts better,
+- Understanding supabase and how it is used. Supabase has great user design, so it simplifies the **backend** and I can understand backend concepts better.
 - Separating **api calls into its own module/layer** in order to decouple the view from the api, so it should be simple to switch to a different backend if needed.
 - Use react-router to handle all of the **navigation on the client**.
 - Making design **responsive** in order to show/improve my CSS.
@@ -21,7 +21,7 @@ The objectives I set for myself were:
 
 ## Wireframe design 🤓
 
-I always start with a wireframe of the project to get a general idea of what I want to include and the user flow. I like doing it on paper, I don't use a computer to avoid temptation to include decoration (like colors) and focus on the user flow and features needed
+I always start with a wireframe of the project to get a general idea of what I want to include and the user flow. I like doing it on paper, I don't use a computer to avoid temptation to include decoration (like colors) and focus on the user flow and features needed.
 
 ![Calendar wireframe](./readme/wireframe.jpg)
 
@@ -41,7 +41,7 @@ Next I started crafting the views and components directly in the browser using C
 Elements like the logo and illustrations were created using Affinity Designer and exported as SVGs.
 
 ### Logo
-I created two versions of the logo with text and without to adapt to different screen sizes
+I created two versions of the logo with text and without to adapt to different screen sizes.
 
 ![Logo agenda peques](./readme/logos.png)
 
