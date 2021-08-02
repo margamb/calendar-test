@@ -34,7 +34,6 @@ const SignIn = () => {
     };
 
     await setUser(userData);
-    // storage.setUser(userData);
     history.push('/');
     history.go(0);
   }
