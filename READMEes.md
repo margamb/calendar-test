@@ -1,5 +1,7 @@
 # Calendar App
 
+Este documento está disponible en inglés [aquí](./README.md)
+
 Una app de calendario que creé desde cero (bueno, con la ayuda de create react app 😅) para mejorar mi react y javascript. También diseñé toda la interfaz de usuario, hice las ilustraciones y la integré con supabase como backend.
 
 La app es una lista de eventos donde los usuarios pueden registrarse y crear eventos, a los usuarios no registrados se les presentará una lista de los próximos eventos. La idea era mantenerla lo más simple posible para aprender bien las tecnologías, pero también crear algo utilizable en producción.
