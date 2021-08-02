@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/calendar-test/static/css/main.14be0ee3.chunk.css",
-    "main.js": "/calendar-test/static/js/main.0b34154e.chunk.js",
-    "main.js.map": "/calendar-test/static/js/main.0b34154e.chunk.js.map",
+    "main.css": "/calendar-test/static/css/main.b2e091c0.chunk.css",
+    "main.js": "/calendar-test/static/js/main.4d80630d.chunk.js",
+    "main.js.map": "/calendar-test/static/js/main.4d80630d.chunk.js.map",
     "runtime-main.js": "/calendar-test/static/js/runtime-main.9d74e268.js",
     "runtime-main.js.map": "/calendar-test/static/js/runtime-main.9d74e268.js.map",
     "static/js/2.a1af2dba.chunk.js": "/calendar-test/static/js/2.a1af2dba.chunk.js",
     "static/js/2.a1af2dba.chunk.js.map": "/calendar-test/static/js/2.a1af2dba.chunk.js.map",
     "index.html": "/calendar-test/index.html",
-    "static/css/main.14be0ee3.chunk.css.map": "/calendar-test/static/css/main.14be0ee3.chunk.css.map",
+    "static/css/main.b2e091c0.chunk.css.map": "/calendar-test/static/css/main.b2e091c0.chunk.css.map",
     "static/js/2.a1af2dba.chunk.js.LICENSE.txt": "/calendar-test/static/js/2.a1af2dba.chunk.js.LICENSE.txt",
     "static/media/CreateEvents.css": "/calendar-test/static/media/CreateEventsImage.440d86a9.svg",
     "static/media/SignIn.css": "/calendar-test/static/media/rocket.64177cc1.svg",
     "static/media/EventDetails.css": "/calendar-test/static/media/footerImg.30caa73d.svg",
     "static/media/events-img.89697887.svg": "/calendar-test/static/media/events-img.89697887.svg",
     "static/media/SignUp.css": "/calendar-test/static/media/sign-up-globe.259e49eb.svg",
-    "static/media/AppHeader.css": "/calendar-test/static/media/logoText.ec2632c5.svg"
+    "static/media/AppHeader.css": "/calendar-test/static/media/logoText.d3ed0410.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.9d74e268.js",
     "static/js/2.a1af2dba.chunk.js",
-    "static/css/main.14be0ee3.chunk.css",
-    "static/js/main.0b34154e.chunk.js"
+    "static/css/main.b2e091c0.chunk.css",
+    "static/js/main.4d80630d.chunk.js"
   ]
 }
